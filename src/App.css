@@ -12,7 +12,7 @@
 .navbar {
   width: 200px;
   background-color: #333;
-  color: white;
+  color: rgb(221, 143, 143);
   padding: 20px;
 }
 
@@ -20,34 +20,39 @@
 /* About.css */
 #about {
   min-height: 300px; /* Adjust the height as needed */
-  color: rgb(240, 255, 243);
+  color: rgb(124, 123, 124);
   font-weight: bold;
+  background-color: #333;
 }
 
 
 /* Projects.css */
 #projects {
   min-height: 400px; /* Adjust the height as needed */
-  color: azure;
+  color: rgb(223, 136, 16);
+  background-color: #333;
+
 
 }
 
 /* Contact.css */
 #contact {
   min-height: 200px; /* Adjust the height as needed */
-  color: azure;
+  color: rgb(26, 161, 161);
+  background-color: #333;
+
 
 }
 
 .container {
-  width: 300px;
+  width: 500px; /* Increase the width as needed */
   height: 100%;
   display: block;
   align-items: left;
   justify-content: left;
   text-shadow: #333;
-  
 }
+
 
 .reveal-container {
   position: relative;
@@ -72,7 +77,7 @@
 .revealed-text {
   position: relative; /* Change to relative position */
   background-color: transparent;
-  color: rgb(243, 249, 243);
+  color: rgb(191, 196, 191);
   font-size: 18px;
   display: inline-block; /* Display as inline block */
   overflow: hidden;

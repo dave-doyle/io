@@ -42,7 +42,9 @@ const Scrambler = ({ phrases, initialDelay, revealDuration }) => {
     update();
   }, [counter, phrases, frame, chars, initialDelay, revealDuration, scrambleCompleted]);
 
-  return <div className="text">{displayedText}</div>;
+  return  <div className="text" style={{ fontFamily: "Roboto Mono", fontSize: "1em",whiteSpace: "nowrap", maxWidth: "100%"  }}>
+  {displayedText}
+</div>;
 };
 
 export default Scrambler;

@@ -1,51 +1,43 @@
 import React from "react";
+import { Box, Heading, Text } from "@chakra-ui/react"; // Import Chakra UI components
 import Scrambler from "./Scrambler.js";
 import { TypeAnimation } from "react-type-animation";
+import SmoothRevealText from "./SmoothRevealText";
 
 function About() {
   const phrase_1 = ["David Doyle Software Developer"]; // Array of phrases
 
-  
-  const initialDelay = 5; 
-  const revealDuration = 2000; 
+  const initialDelay = 5;
+  const revealDuration = 2000;
 
   return (
-    <section id="about">
-      <h2>About Me</h2>
+    <Box id="about" color="white">
+      <Heading as="h2" fontSize="2xl" mb="4">
+        About Me
+      </Heading>
 
-      {/* <div className="container">
-        <div className="text">
+      <br />
+
+      <div className="revealed-text">
+        <div className="container" style={{ display: "flex" }}>
           <Scrambler
             phrases={phrase_1}
             initialDelay={initialDelay}
             revealDuration={revealDuration}
+            fontSize="1em"
           />
-        </div>
-      </div> */}
 
-      <br />
+          <TypeAnimation
+            sequence={["", 1, ""]}
+            speed={20}
+            style={{ whiteSpace: "pre-line", fontSize: "1em" }}
+            repeat={0}
+          />
 
-      
-        
-        <div className="revealed-text">
-          <div className="container">
-            
-              <Scrambler
-                phrases={phrase_1}
-                initialDelay={initialDelay}
-                revealDuration={revealDuration}
-              />
-            
-            <TypeAnimation
-              sequence={[``, 1, ""]}
-              speed={20}
-              style={{ whiteSpace: "pre-line", fontSize: "2em" }}
-              repeat={0}
-            />
-          </div>
+          
         </div>
-      
-    </section>
+      </div>
+    </Box>
   );
 }
 

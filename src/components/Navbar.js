@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box, Text, UnorderedList, ListItem } from '@chakra-ui/react';
 
 function Navbar() {
   const scrollToSection = (sectionId) => {
@@ -9,13 +10,25 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar">
-      <ul>
-        <li><a onClick={() => scrollToSection('About')}>About</a></li>
-        <li><a onClick={() => scrollToSection('Projects')}>Projects</a></li>
-        <li><a onClick={() => scrollToSection('Contact')}>Contact</a></li>
-      </ul>
-    </nav>
+    <Box width="200px" bg="#333" color="white" p="20px">
+      <UnorderedList listStyleType="none" padding="0">
+        <ListItem>
+          <Text cursor="pointer" onClick={() => scrollToSection('About')}>
+            About
+          </Text>
+        </ListItem>
+        <ListItem>
+          <Text cursor="pointer" onClick={() => scrollToSection('Projects')}>
+            Projects
+          </Text>
+        </ListItem>
+        <ListItem>
+          <Text cursor="pointer" onClick={() => scrollToSection('Contact')}>
+            Contact
+          </Text>
+        </ListItem>
+      </UnorderedList>
+    </Box>
   );
 }
 
