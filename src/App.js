@@ -1,24 +1,51 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import { createGlobalStyle } from 'styled-components';
+
+
+
+// Create a global style component
+const GlobalStyle = createGlobalStyle`
+  @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+  html, body {
+    font-family: 'Roboto Mono', monospace;
+    background: #212121;
+    height: 100%;
+  }
+  .container {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .text {
+    font-weight: 100;
+    font-size: 28px;
+    color: white;
+  }
+  .dud {
+    color: #757575;
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <GlobalStyle />
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <About />
+          <Projects />
+          <Contact />
+        </div>
+      </div>
+    </>
   );
 }
 
