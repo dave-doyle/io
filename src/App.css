@@ -23,6 +23,8 @@
   color: rgb(124, 123, 124);
   font-weight: bold;
   background-color: #333;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 
@@ -31,6 +33,8 @@
   min-height: 400px; /* Adjust the height as needed */
   color: rgb(223, 136, 16);
   background-color: #333;
+  margin-bottom: 50px;
+
 
 
 }
@@ -40,6 +44,8 @@
   min-height: 200px; /* Adjust the height as needed */
   color: rgb(26, 161, 161);
   background-color: #333;
+  margin-bottom: 50px;
+
 
 
 }
@@ -63,16 +69,7 @@
   display: inline-block; /* Display as inline block */
 }
 
-.blue-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%; /* Start with a width of 0% */
-  height: 100%;
-  background-color: rgb(20, 67, 255);
-  animation: revealAnimation 1.4s linear forwards; /* Adjust the animation duration */
-  z-index: 2; /* Set a higher z-index to cover the text */
-}
+
 
 .revealed-text {
   position: relative; /* Change to relative position */
@@ -84,41 +81,21 @@
   z-index: 1;
 }
 
-@keyframes revealAnimation {
-  0% {
-    width: 0%; /* Start with a width of 0% */
-    left: 0; /* Start from the left edge */
-  }
-  20% {
-    width: 20%; /* Extend to 20% width at 20% progress */
-    left: 0; /* Maintain position at the left edge */
-  }
-  40% {
-    width: 40%; /* Extend to 40% width at 40% progress */
-    left: 0%; /* Maintain position at the left edge */
-  }
-  60% {
-    width: 60%; /* Extend to 60% width at 60% progress */
-    left: 0%; /* Maintain position at the left edge */
-  }
-  80% {
-    width: 80%; /* Extend to 80% width at 80% progress */
-    left: 5%; /* Maintain position at the left edge */
-  }
-  100% {
-    width: 0; /* Retract back to 0% width at 100% progress */
-    left: 100%; /* Move to the right edge while retracting */
-  }
+/* Navbar.css */
+.vertical-text {
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  white-space: nowrap;
+  margin-top: 100px;
 }
 
+.visible {
+  visibility: visible;
+}
 
-
-
-
-
-
-
-
+.hidden {
+  visibility: hidden;
+}
 
 
 

@@ -1,8 +1,10 @@
+import { Box } from '@chakra-ui/react';
 import React from 'react';
+
 
 function Projects() {
   return (
-    <section id="projects">
+    <Box bg="#333" id='project' color="white" marginBottom={'100px'} marginTop={'100px'}>
       <h2>Projects</h2>
       <div className="project">
         <h3>Project 1</h3>
@@ -13,7 +15,7 @@ function Projects() {
         <p>This is a description of your second project.</p>
       </div>
       {/* Add more project divs as needed */}
-    </section>
+    </Box>
   );
 }
 

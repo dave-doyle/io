@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Text, UnorderedList, ListItem } from '@chakra-ui/react';
+import '../App.css'; // Import your custom CSS file
 
 function Navbar() {
   const scrollToSection = (sectionId) => {
@@ -13,17 +14,29 @@ function Navbar() {
     <Box width="200px" bg="#333" color="white" p="20px">
       <UnorderedList listStyleType="none" padding="0">
         <ListItem>
-          <Text cursor="pointer" onClick={() => scrollToSection('About')}>
+          <Text
+            className="vertical-text" // Add a class for vertical text rotation
+            cursor="pointer"
+            onClick={() => scrollToSection('About')}
+          >
             About
           </Text>
         </ListItem>
         <ListItem>
-          <Text cursor="pointer" onClick={() => scrollToSection('Projects')}>
+          <Text
+            className="vertical-text" // Add the same class for vertical text rotation
+            cursor="pointer"
+            onClick={() => scrollToSection('Projects')}
+          >
             Projects
           </Text>
         </ListItem>
         <ListItem>
-          <Text cursor="pointer" onClick={() => scrollToSection('Contact')}>
+          <Text
+            className="vertical-text" // Add the same class for vertical text rotation
+            cursor="pointer"
+            onClick={() => scrollToSection('Contact')}
+          >
             Contact
           </Text>
         </ListItem>
