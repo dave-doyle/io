@@ -9,7 +9,7 @@ function About() {
   const phrase_2 = ["David Doyle"]; // Array of phrases
 
   const initialDelay = 5;
-  const revealDuration = 2000;
+  const revealDuration = 200;
 
   const [isAnimating, setIsAnimating] = useState(false);
   const [isRectReceding, setIsRectReceding] = useState(false);
@@ -25,12 +25,12 @@ function About() {
 
   return (
     <Box id="about" color="white" marginBottom={"100px"}>
-      <Heading as="h2" fontSize="2xl" mb="4">
+      <Heading as="h2" fontSize="3xl" mb="4">
         <Scrambler
           phrases={phrase_1}
           initialDelay={initialDelay}
           revealDuration={revealDuration}
-          fontSize="1em"
+          fontSize="4em"
         />
       </Heading>
 
@@ -38,17 +38,20 @@ function About() {
 
       <div className="revealed-text">
         <div className="container" style={{ display: "flex" }}>
+        <Heading as="h2" fontSize="3xl" mb="4">
           <Scrambler
             phrases={phrase_2}
             initialDelay={initialDelay}
             revealDuration={revealDuration}
-            fontSize="1em"
+            fontSize="4em"
           />
 
+          
+          </Heading>
           <TypeAnimation
             sequence={["", 1, ""]}
             speed={20}
-            style={{ whiteSpace: "pre-line", fontSize: "1em" }}
+            style={{ whiteSpace: "pre-line", fontSize: "1.4em" }}
             repeat={0}
           />
         </div>
@@ -59,16 +62,17 @@ function About() {
         <AnimatePresence>
           {isAnimating && (
             <motion.div
-              initial={{ width: 0, left: "25%" }}
-              animate={{ width: "25%", left: "25%" }}
-              exit={{ width: 0, left: "50%", duration: 0.5 }}
+              initial={{ width: 0, left: "50%" }}
+              animate={{ width: "50%", left: "15%", }}
+              exit={{ width: 0, left: "5%", duration:0.05}}
               transition={{
-                ease: "easeInOut", // Use easeInOut for smoother transition
-                duration: 2, // Increase the duration
+                 // Use easeInOut for smoother transition
+                duration: 0.5, // Increase the duration
                 
               }}
               style={{
-                height: "40px",
+                height: "60px",
+                borderRadius:'5px',
                 background: "turquoise",
                 position: "absolute",
                 top: 0,
@@ -87,13 +91,14 @@ function About() {
             color: "white",
             marginTop: "20px",
             textAlign: "center",
-            fontSize: "1em",
+            fontSize: "2em",
             whiteSpace: "pre-line",
             position: "absolute",
             width: "100%",
             top: "-5%",
             left: "-10%",
             zIndex: isRectReceding ? 0 : 3, // Show behind rectangle when rect is receding
+            fontFamily: "Roboto Mono",
           }}
         >
           Sofware Developer From Dublin
