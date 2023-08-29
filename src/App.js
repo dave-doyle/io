@@ -6,13 +6,14 @@ import Contact from './components/Contact';
 import PageMenu from './components/PageMenu';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import CloudsBackground from './components/CloudsBackground';
+import CellsBackground from './components/CellsBackground';
 
 
 function App() {
   return (
     <ChakraProvider>
       <div className="App">
-       <CloudsBackground/>
+       <CellsBackground/>
         <PageMenu/>
         <div className="content">
           <About />

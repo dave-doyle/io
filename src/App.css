@@ -52,12 +52,13 @@
 }
 
 .container {
-  width: 600px; /* Increase the width as needed */
+  width: 100%; /* Increase the width as needed */
   height: 100%;
   display: block;
   align-items: left;
   justify-content: left;
-  text-shadow: #333;
+  text-shadow: #a2a1a1;
+  padding-left: 30px;
 }
 
 
@@ -75,7 +76,7 @@
 .revealed-text {
   position: relative; /* Change to relative position */
   background-color: transparent;
-  color: rgb(191, 196, 191);
+  color: rgba(255, 255, 255, 0.796);
   font-size: 18px;
   display: inline-block; /* Display as inline block */
   overflow: hidden;

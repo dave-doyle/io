@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Scrambler = ({ phrases, initialDelay, revealDuration }) => {
+const Scrambler = ({ phrases, initialDelay, revealDuration, fontFamily  }) => {
   const chars =
     "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン漢字文学科学生物化学歴史地理音楽美術数学社会政治経済外国語";
 
@@ -22,6 +22,8 @@ const Scrambler = ({ phrases, initialDelay, revealDuration }) => {
       for (let i = 0; i < fx.length; i++) {
         if (elapsed >= initialDelay + i * revealDuration) {
           newDisplayedText += fx[i];
+
+          
         } else {
           newDisplayedText += chars[Math.floor(Math.random() * chars.length)];
         }
@@ -49,7 +51,7 @@ const Scrambler = ({ phrases, initialDelay, revealDuration }) => {
   }, [counter, phrases]);
 
   return (
-    <div className="text" style={{ fontFamily: "Roboto Mono", fontSize: "1em", whiteSpace: "nowrap" }}>
+    <div className="text" style={{ fontFamily, fontSize: "1em", whiteSpace: "nowrap"}}>
       {displayedText}
     </div>
   );
