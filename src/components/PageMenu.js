@@ -40,7 +40,7 @@ const PageMenu = () => {
   }, []);
 
   return (
-    <div className="Menu">
+    <div className="Menu" background colour>
       <ul className="Menu-list" data-offset="10">
         <li className="Menu-list-item" data-offset="20" onClick={() => {}}>
           About

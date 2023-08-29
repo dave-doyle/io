@@ -34,19 +34,15 @@ function About() {
         />
       </Heading>
 
-      <br />
-
       <div className="revealed-text">
         <div className="container" style={{ display: "flex" }}>
-        <Heading as="h2" fontSize="3xl" mb="4">
-          <Scrambler
-            phrases={phrase_2}
-            initialDelay={initialDelay}
-            revealDuration={revealDuration}
-            fontSize="4em"
-          />
-
-          
+          <Heading as="h2" fontSize="3xl" mb="4">
+            <Scrambler
+              phrases={phrase_2}
+              initialDelay={initialDelay}
+              revealDuration={revealDuration}
+              fontSize="4em"
+            />
           </Heading>
           <TypeAnimation
             sequence={["", 1, ""]}
@@ -63,16 +59,15 @@ function About() {
           {isAnimating && (
             <motion.div
               initial={{ width: 0, left: "50%" }}
-              animate={{ width: "50%", left: "15%", }}
-              exit={{ width: 0, left: "5%", duration:0.05}}
+              animate={{ width: "50%", left: "15%" }}
+              exit={{ width: 0, left: "5%", duration: 0.05 }}
               transition={{
-                 // Use easeInOut for smoother transition
+                // Use easeInOut for smoother transition
                 duration: 0.5, // Increase the duration
-                
               }}
               style={{
                 height: "60px",
-                borderRadius:'5px',
+                borderRadius: "5px",
                 background: "turquoise",
                 position: "absolute",
                 top: 0,
@@ -103,6 +98,9 @@ function About() {
         >
           Sofware Developer From Dublin
         </motion.div>
+      </div>
+      <div>
+        
       </div>
     </Box>
   );

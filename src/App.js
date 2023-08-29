@@ -12,10 +12,12 @@ function App() {
   return (
     <ChakraProvider>
       <div className="App">
-        <Navbar />
+       
         <PageMenu/>
         <div className="content">
           <About />
+          
+          <br></br>
           <Projects />
           <Contact />
         </div>

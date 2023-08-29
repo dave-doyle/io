@@ -9,6 +9,8 @@
     align-items: center;
     transform: rotateX(-10deg) rotateY(20deg); /* overwritten by JS */
     
+    
+    
   }
   
   .Menu-list-item {
@@ -60,7 +62,7 @@
   .Menu-list-item:hover,
   .Menu-list-item:active {
     .Mask {
-      color: #FFF;
+      color: #602525;
       transform: skewX(12deg) translateX(5px);
     }
     .Mask + .Mask {
