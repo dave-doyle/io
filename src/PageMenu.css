@@ -17,7 +17,7 @@
     position: relative;
     color: transparent;
     cursor: pointer;
-    background-color: rgb(64, 64, 64);
+    /* background-color: rgb(64, 64, 64); */
   }
   
   .Menu-list-item::before {
@@ -30,7 +30,7 @@
     height: 4px;
     border-radius: 4px;
     margin-top: -2px;
-    background: #FF2C75;
+    background: #2cedff;
     transform: scale(0);
     transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
     z-index: 1;
@@ -41,7 +41,7 @@
     display: block;
     position: absolute;
     overflow: hidden;
-    color: #FF2C75;
+    color: #747474;
     top: 0;
     height: 49%;
     transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
@@ -62,7 +62,7 @@
   .Menu-list-item:hover,
   .Menu-list-item:active {
     .Mask {
-      color: #602525;
+      color: #9e7676;
       transform: skewX(12deg) translateX(5px);
     }
     .Mask + .Mask {

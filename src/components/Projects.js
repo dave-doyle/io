@@ -4,7 +4,7 @@ import React from 'react';
 
 function Projects() {
   return (
-    <Box bg="#333" id='project' color="white" marginBottom={'100px'} marginTop={'100px'}>
+    <Box id='project' color="white" >
       <h2>Projects</h2>
       <div className="project">
         <h3>Project 1</h3>

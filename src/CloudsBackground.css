@@ -1,0 +1,10 @@
+/* CloudsBackground.css */
+.clouds-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% of viewport width */
+    height: 100vh; /* 100% of viewport height */
+    z-index: -1; /* Place it behind other content */
+  }
+  

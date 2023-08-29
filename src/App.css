@@ -19,13 +19,13 @@
 /* Add fixed size styles for each section */
 /* About.css */
 #about {
-  min-height: 300px; /* Adjust the height as needed */
+  min-height: 100px; /* Adjust the height as needed */
   color: rgb(124, 123, 124);
   font-weight: bold;
-  background-color: #333;
+  /* background-color: #333; */
   padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 500px;
+  /* padding-top: 10px; */
+  /* padding-bottom: 100px; */
 }
 
 
@@ -33,7 +33,7 @@
 #projects {
   min-height: 400px; /* Adjust the height as needed */
   color: rgb(223, 136, 16);
-  background-color: #333;
+  /* background-color: #333; */
   margin-bottom: 50px;
 
 
@@ -43,8 +43,8 @@
 /* Contact.css */
 #contact {
   min-height: 200px; /* Adjust the height as needed */
-  color: rgb(26, 161, 161);
-  background-color: #333;
+  color: rgb(217, 225, 225);
+  /* background-color: #333; */
   margin-bottom: 50px;
 
 
@@ -52,7 +52,7 @@
 }
 
 .container {
-  width: 500px; /* Increase the width as needed */
+  width: 600px; /* Increase the width as needed */
   height: 100%;
   display: block;
   align-items: left;
@@ -65,7 +65,7 @@
   position: relative;
   overflow: hidden;
   width: fit-content; /* Set the width to fit the content */
-  height: 50px; /* Set the height as needed */
+  height: 10px; /* Set the height as needed */
   background-color: transparent;
   display: inline-block; /* Display as inline block */
 }

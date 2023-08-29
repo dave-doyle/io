@@ -5,8 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 import { motion, AnimatePresence } from "framer-motion";
 
 function About() {
-  const phrase_1 = ["About Me"];
-  const phrase_2 = ["David Doyle"]; // Array of phrases
+  const phrase_1 = ["David Doyle"];
+  const phrase_2 = ["Software Developer"]; // Array of phrases
 
   const initialDelay = 5;
   const revealDuration = 200;
@@ -36,7 +36,7 @@ function About() {
 
       <div className="revealed-text">
         <div className="container" style={{ display: "flex" }}>
-          <Heading as="h2" fontSize="3xl" mb="4">
+          <Heading as="h2" fontSize="3xl" mb="4" >
             <Scrambler
               phrases={phrase_2}
               initialDelay={initialDelay}
@@ -63,7 +63,7 @@ function About() {
               exit={{ width: 0, left: "5%", duration: 0.05 }}
               transition={{
                 // Use easeInOut for smoother transition
-                duration: 0.5, // Increase the duration
+                duration: 0.9 // Increase the duration
               }}
               style={{
                 height: "60px",
