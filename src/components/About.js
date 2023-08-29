@@ -62,7 +62,7 @@ function About() {
         </div>
       </div> */}
 
-      <RevealText/>
+      {/* <RevealText/> */}
 
     </Box>
   );
