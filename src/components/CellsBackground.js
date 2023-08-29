@@ -16,8 +16,9 @@ const CellsBackground = () => {
       minHeight: 200.0,
       minWidth: 200.0,
       scale: 1.0,
-      color1: 0x144040,
-      color2: 0xd6172,
+      color1: 0x0,
+      color2: 0x185e5e,
+      size: 0.9,
     });
   }, []);
 

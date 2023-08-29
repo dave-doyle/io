@@ -27,24 +27,25 @@ const startAnimation = () => {
 
   return (
     <Box>
-      <div style={{ position: "relative", height: "50px" }}>
+      <div style={{ position: "relative", height: "80px", paddingTop:'200px' }}>
         <AnimatePresence>
           {isAnimating && (
             <motion.div
-              initial={{ width: 0, left: "50%" }}
-              animate={{ width: "50%", left: "15%" }}
-              exit={{ width: 0, left: "5%", duration: 0.05 }}
+              initial={{ width: 0, left: "60%" }}
+              animate={{ width: "50%", left: "2.5%" }}
+              exit={{ width: 0, left: "1%", duration: 0.05 }}
               transition={{
                 // Use easeInOut for smoother transition
                 duration: 0.9, // Increase the duration
               }}
               style={{
-                height: "60px",
-                borderRadius: "5px",
-                background: "turquoise",
+                height: "80px",
+                borderRadius: "1px",
+                background: "#2cedff",
                 position: "absolute",
                 top: 0,
                 zIndex: 4,
+                
               }}
             ></motion.div>
           )}
@@ -54,23 +55,37 @@ const startAnimation = () => {
           animate={{
             opacity: isRectReceding ? 1 : 0, // Show text when rect is receding
           }}
-          transition={{ ease: "easeInOut", duration: 0.5 }} // Use easeInOut
+          transition={{ ease: "easeInOut", duration: 0.9 }} // Use easeInOut
           style={{
-            color: "white",
+            color: "rgba(255, 255, 255, 0.796)",
             marginTop: "20px",
             textAlign: "center",
-            fontSize: "2em",
+            fontSize: "3.8em",
             whiteSpace: "pre-line",
             position: "absolute",
             width: "100%",
             top: "-5%",
-            left: "-10%",
+            left: "-20.8%",
             zIndex: isRectReceding ? 0 : 3, // Show behind rectangle when rect is receding
             fontFamily: "Roboto Mono",
           }}
         >
-          Sofware Developer From Dublin
+          From Dublin Ireland
         </motion.div>
+         {/* Grey line */}
+         <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: "55%" }}
+          transition={{ duration: 3 }} // Adjust the duration as needed
+          style={{
+            height: "1px",
+            background: "grey",
+            position: "absolute",
+            top: "50%",
+            left: "2%",
+            zIndex: 3,
+          }}
+        ></motion.div>
       </div>
     </Box>
   );
