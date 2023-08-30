@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Box, Heading, Text } from "@chakra-ui/react";
+
 
 import '../PageMenu.css'; // Import your CSS file
 
@@ -53,6 +55,7 @@ const PageMenu = () => {
   }, []);
 
   return (
+    <Heading>
     <motion.div
       className={`Menu-list ${isMenuVisible ? 'visible' : ''}`}
       initial={{ opacity: 0 }} // Initial opacity is 0
@@ -92,6 +95,24 @@ const PageMenu = () => {
         
       </ul>
     </motion.div>
+
+{/* black background */}
+<motion.div
+  initial={{ height: 0, top: 0 }} // Set initial height to 0
+  animate={{ height: "100%" }} // Animate height to cover the screen
+  transition={{ duration: 3.2 }} // Adjust the duration as needed
+  style={{
+    width: "20%", // Set width to cover the screen horizontally
+    background: "black",
+    position: "absolute",
+    top: 0,
+    left: "0%",
+    zIndex: -1,
+  }}
+></motion.div>
+
+    </Heading>
+    
   );
 };
 

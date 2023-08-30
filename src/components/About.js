@@ -20,7 +20,9 @@ function About() {
         fontSize="4xl"
         mb="4"
         paddingLeft={"185px"}
+        paddingBottom={'19px'}
         color={"#a2a1a1"}
+        
       >
         <Scrambler
           phrases={phrase_1}
@@ -34,7 +36,7 @@ function About() {
         {/* Grey line */}
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "16%" }}
+          animate={{ width: "16.5%" }}
           transition={{ duration: 3.2 }} // Adjust the duration as needed
           style={{
             height: "1px",
@@ -45,6 +47,21 @@ function About() {
             zIndex: 3,
           }}
         ></motion.div>
+
+        {/* black background */}
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: "76.8%" }}
+          transition={{ duration: 3.2 }} // Adjust the duration as needed
+          style={{
+            height: "70px",
+            background: "black",
+            position: "absolute",
+            top: "15%",
+            left: "23.1%",
+            zIndex: -1,
+          }}
+        ></motion.div>
         
       </Heading>
      
@@ -53,7 +70,7 @@ function About() {
 
       <div className="revealed-text">
         <div className="container" style={{ display: "flex"}}>
-          <Text fontSize="6xl" fontWeight={900} fontFamily="Font2, roboto mono">
+          <Text paddingRight={'30px'} paddingLeft={'30px'} bg={'black'} fontSize="6xl" fontWeight={900} fontFamily="Font2, roboto mono">
             <Scrambler
               phrases={phrase_2}
               initialDelay={initialDelay}

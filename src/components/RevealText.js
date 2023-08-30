@@ -51,6 +51,23 @@ const startAnimation = () => {
           )}
         </AnimatePresence>
         <motion.div
+  initial={{ opacity: 0, zIndex: 2 }} // Set zIndex to 2 to be behind the text
+  animate={{
+    opacity: isRectReceding ? 1 : 0, // Show background when rect is receding
+  }}
+  transition={{ ease: "easeInOut", duration: 0.9 }}
+  style={{
+    background: "black", // Set the background color
+    padding: "60px 400px", // Adjust padding as needed
+    borderRadius: "5px", // Adjust border radius as needed
+    position: "absolute",
+    width: "fit-content", // Make the width fit the content
+    top: "-5%", // Adjust top position as needed
+    left: "12.7%", // Adjust left position as needed
+    zIndex: 2, // Set zIndex to be behind the text
+  }}
+></motion.div>
+        <motion.div
           initial={{ opacity: 0, zIndex: 3 }}
           animate={{
             opacity: isRectReceding ? 1 : 0, // Show text when rect is receding
@@ -68,6 +85,7 @@ const startAnimation = () => {
             left: "-9.7%",
             zIndex: isRectReceding ? 0 : 3, // Show behind rectangle when rect is receding
             fontFamily: "Roboto Mono",
+            
           }}
         >
           From Dublin Ireland
