@@ -1,10 +1,11 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 import React from 'react';
 
 
 function Projects() {
   return (
-    <Box id='project' color="white" >
+    <Box  id='project' color="white" marginLeft="40%">
+     
       <h2>Projects</h2>
       <div className="project">
         <h3>Project 1</h3>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Box, Heading, Text } from "@chakra-ui/react";
-
+import { Heading } from '@chakra-ui/react';
 
 import '../PageMenu.css'; // Import your CSS file
 
@@ -12,7 +11,7 @@ const PageMenu = () => {
   useEffect(() => {
     const visibilityTimeout = setTimeout(() => {
       setIsMenuVisible(true);
-    }, 3000); // Set the delay time in milliseconds
+    }, 5000); // Set the delay time in milliseconds
 
     return () => clearTimeout(visibilityTimeout);
   }, []);
@@ -95,14 +94,13 @@ const PageMenu = () => {
         
       </ul>
     </motion.div>
-
 {/* black background */}
 <motion.div
   initial={{ height: 0, top: 0 }} // Set initial height to 0
   animate={{ height: "100%" }} // Animate height to cover the screen
   transition={{ duration: 3.2 }} // Adjust the duration as needed
   style={{
-    width: "20%", // Set width to cover the screen horizontally
+    width: "19%", // Set width to cover the screen horizontally
     background: "black",
     position: "absolute",
     top: 0,
@@ -111,7 +109,9 @@ const PageMenu = () => {
   }}
 ></motion.div>
 
+
     </Heading>
+    
     
   );
 };

@@ -17,7 +17,7 @@ function App() {
       <div className="App">
        <CellsBackground/>
         <PageMenu/>
-        {/* <SketchfabEmbed /> */}
+        <SketchfabEmbed />
 
         <div className="content">
           <About />
