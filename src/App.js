@@ -16,22 +16,26 @@ function App() {
   return (
     <ChakraProvider>
       <div className="App">
-       <CellsBackground/>
-        <PageMenu/>
-        {/* <SketchfabEmbed />*/} {/*Gis 3d model */}
-        <SecondEmbed/> {/*Computer 3d model*/}
+        <CellsBackground />
+        <PageMenu />
+        <SecondEmbed />
 
         <div className="content">
           <About />
-          
-          <br></br>
-          <Projects />
-          <Contact />
+          <div className="grid">
+            <div className="project">
+              <Projects />
+            </div>
+            <div className="contact">
+              <Contact />
+            </div>
+          </div>
         </div>
       </div>
     </ChakraProvider>
   );
 }
+
 
 
 export default App;

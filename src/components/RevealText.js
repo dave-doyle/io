@@ -55,12 +55,12 @@ function RevealText() {
           transition={{ ease: "easeInOut", duration: 0.9 }}
           style={{
             background: "black", // Set the background color
-            padding: "60px 400px", // Adjust padding as needed
+            padding: "60px 435px", // Adjust padding as needed
             borderRadius: "3px", // Adjust border radius as needed
             position: "absolute",
             width: "fit-content", // Make the width fit the content
-            top: "-5%", // Adjust top position as needed
-            left: "12.7%", // Adjust left position as needed
+            top: "-7%", // Adjust top position as needed
+            left: "7.7%", // Adjust left position as needed
             zIndex: 2, // Set zIndex to be behind the text
           }}
         ></motion.div>

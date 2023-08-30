@@ -60,7 +60,7 @@ function About() {
             height: "1px",
             background: "grey",
             position: "absolute",
-            top: "20.5%",
+            top: "12.5%",
             left: "23.6%",
             zIndex: 3,
           }}
@@ -69,14 +69,14 @@ function About() {
         {/* black background */}
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "76.8%" }}
+          animate={{ width: "81.8%" }}
           transition={{ duration: 3.2 }} // Adjust the duration as needed
           style={{
-            height: "70px",
+            height: "110px",
             background: "black",
             position: "absolute",
-            top: "15%",
-            left: "23.1%",
+            top: "15.5%",
+            left: "18.1%",
             zIndex: -1,
             borderRadius: "3px",
           }}
@@ -88,7 +88,7 @@ function About() {
           animate={{ width: "99.9%" }}
           transition={{ duration: 3.2 }} // Adjust the duration as needed
           style={{
-            height: "232px",
+            height: "255px",
             background: "black",
             position: "absolute",
             top: "0%",
@@ -130,10 +130,10 @@ function About() {
         animate={{ height: "94px" }} // Change height to show vertical line
         transition={{ duration: 2 }} // Adjust the duration as needed
         style={{
-          width: "2px", // Change width to show vertical line
+          width: "3.5px", // Change width to show vertical line
           background: "grey",
           position: "absolute",
-          top: "25.19%",
+          top: "16.5%",
           left: "70.6%",
           zIndex: 3,
         }}
@@ -143,13 +143,13 @@ function About() {
       {isGrayLine2Visible && ( // Render gray line 2 when isGrayLine2Visible is true
         <motion.div
         initial={{ width: 0 }}
-        animate={{ width: "83px" }}
+        animate={{ width: "87.37px" }}
         transition={{ duration: 2 }} // Adjust the duration as needed
         style={{
-          height: "2px",
+          height: "3px",
           background: "grey",
           position: "absolute",
-          top: "32.9%",
+          top: "20.6%",
           left: "70%",
           zIndex: 3,
         }}
