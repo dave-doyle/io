@@ -14,13 +14,14 @@ const CloudsBackground = () => {
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      minHeight: 600.00,
+      minHeight: 1100.00,
       minWidth: 600.00,
       skyColor: 0x204,
       cloudColor: 0x436190,
       sunColor: 0x396e98,
       sunGlareColor: 0x111172,
       sunlightColor: 0x32adff,
+      speed:0.9
     });
 
   }, []);

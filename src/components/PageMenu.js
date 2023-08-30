@@ -1,7 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+
 import '../PageMenu.css'; // Import your CSS file
 
 const PageMenu = () => {
+
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+
+  useEffect(() => {
+    const visibilityTimeout = setTimeout(() => {
+      setIsMenuVisible(true);
+    }, 3000); // Set the delay time in milliseconds
+
+    return () => clearTimeout(visibilityTimeout);
+  }, []);
+
   useEffect(() => {
     const $menu = document.querySelector('.Menu-list');
     const $item = document.querySelectorAll('.Menu-list-item');
@@ -40,8 +53,13 @@ const PageMenu = () => {
   }, []);
 
   return (
-    <div className="Menu" background colour>
-      <ul className="Menu-list" data-offset="10">
+    <motion.div
+      className={`Menu-list ${isMenuVisible ? 'visible' : ''}`}
+      initial={{ opacity: 0 }} // Initial opacity is 0
+      animate={{ opacity: isMenuVisible ? 1 : 0 }} // Animate to 1 when visible
+      transition={{ duration: 0.5 }} // Adjust the duration as needed
+    >
+      <ul  data-offset="10">
         <li className="Menu-list-item" data-offset="20" onClick={() => {}}>
           About
           <span className="Mask">
@@ -73,7 +91,7 @@ const PageMenu = () => {
         </li>
         
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

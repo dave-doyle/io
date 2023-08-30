@@ -7,6 +7,8 @@ import PageMenu from './components/PageMenu';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import CloudsBackground from './components/CloudsBackground';
 import CellsBackground from './components/CellsBackground';
+import SketchfabEmbed from './components/SketchfabEmbed'; // Import the new component
+
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
       <div className="App">
        <CellsBackground/>
         <PageMenu/>
+        <SketchfabEmbed />
+
         <div className="content">
           <About />
           

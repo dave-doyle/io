@@ -13,13 +13,13 @@ function About() {
   const revealDuration = 150;
 
   return (
-    <Box id="about" color="white" marginBottom={"100px"}>
+    <Box id="about" color="white" marginBottom={"100px"} marginTop={'150px'} marginLeft={'150px'}> 
       <Heading
         fontWeight={"extrabold"}
         as="h2"
         fontSize="4xl"
         mb="4"
-        paddingLeft={"30px"}
+        paddingLeft={"185px"}
         color={"#a2a1a1"}
       >
         <Scrambler
@@ -34,14 +34,14 @@ function About() {
         {/* Grey line */}
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "16.5%" }}
-          transition={{ duration: 1.6 }} // Adjust the duration as needed
+          animate={{ width: "16%" }}
+          transition={{ duration: 3.2 }} // Adjust the duration as needed
           style={{
             height: "1px",
             background: "grey",
             position: "absolute",
-            top: "8%",
-            left: "15%",
+            top: "20.5%",
+            left: "23.6%",
             zIndex: 3,
           }}
         ></motion.div>
@@ -52,7 +52,7 @@ function About() {
       <br></br>
 
       <div className="revealed-text">
-        <div className="container" style={{ display: "flex" }}>
+        <div className="container" style={{ display: "flex"}}>
           <Text fontSize="6xl" fontWeight={900} fontFamily="Font2, roboto mono">
             <Scrambler
               phrases={phrase_2}

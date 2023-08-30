@@ -76,10 +76,11 @@
 .revealed-text {
   position: relative; /* Change to relative position */
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.796);
+  color: rgba(255, 255, 255, 0.988);
   font-size: 18px;
   display: inline-block; /* Display as inline block */
   overflow: hidden;
+  left: 11.8%;
   z-index: 1;
 }
 

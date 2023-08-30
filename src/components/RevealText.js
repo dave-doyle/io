@@ -32,16 +32,16 @@ const startAnimation = () => {
           {isAnimating && (
             <motion.div
               initial={{ width: 0, left: "60%" }}
-              animate={{ width: "50%", left: "2.5%" }}
-              exit={{ width: 0, left: "1%", duration: 0.05 }}
+              animate={{ width: "61%", left: "-1%" }}
+              exit={{ width: 0, left: "-1.1%", duration: 0.05 }}
               transition={{
                 // Use easeInOut for smoother transition
                 duration: 0.9, // Increase the duration
               }}
               style={{
-                height: "80px",
+                height: "85px",
                 borderRadius: "1px",
-                background: "#2cedff",
+                background: "rgba(30, 243, 207, 0.988)",
                 position: "absolute",
                 top: 0,
                 zIndex: 4,
@@ -57,7 +57,7 @@ const startAnimation = () => {
           }}
           transition={{ ease: "easeInOut", duration: 0.9 }} // Use easeInOut
           style={{
-            color: "rgba(255, 255, 255, 0.796)",
+            color: "rgba(255, 255, 255, 0.988)",
             marginTop: "20px",
             textAlign: "center",
             fontSize: "3.8em",
@@ -65,7 +65,7 @@ const startAnimation = () => {
             position: "absolute",
             width: "100%",
             top: "-5%",
-            left: "-20.8%",
+            left: "-9.7%",
             zIndex: isRectReceding ? 0 : 3, // Show behind rectangle when rect is receding
             fontFamily: "Roboto Mono",
           }}
@@ -75,14 +75,14 @@ const startAnimation = () => {
          {/* Grey line */}
          <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "55%" }}
-          transition={{ duration: 3 }} // Adjust the duration as needed
+          animate={{ width: "53.5%" }}
+          transition={{ duration: 1.5 }} // Adjust the duration as needed
           style={{
             height: "1px",
             background: "grey",
             position: "absolute",
-            top: "50%",
-            left: "2%",
+            top: "48.5%",
+            left: "13.5%",
             zIndex: 3,
           }}
         ></motion.div>
