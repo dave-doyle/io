@@ -4,11 +4,10 @@ import { TypeAnimation } from "react-type-animation";
 import { motion, AnimatePresence } from "framer-motion";
 
 function RevealText() {
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [isRectReceding, setIsRectReceding] = useState(false);
 
-const [isAnimating, setIsAnimating] = useState(false);
-const [isRectReceding, setIsRectReceding] = useState(false);
-
-const startAnimation = () => {
+  const startAnimation = () => {
     setIsAnimating(true);
 
     setTimeout(() => {
@@ -22,12 +21,11 @@ const startAnimation = () => {
     startAnimation();
   }, []);
 
-
-
-
   return (
     <Box>
-      <div style={{ position: "relative", height: "80px", paddingTop:'200px' }}>
+      <div
+        style={{ position: "relative", height: "80px", paddingTop: "200px" }}
+      >
         <AnimatePresence>
           {isAnimating && (
             <motion.div
@@ -45,28 +43,27 @@ const startAnimation = () => {
                 position: "absolute",
                 top: 0,
                 zIndex: 4,
-                
               }}
             ></motion.div>
           )}
         </AnimatePresence>
         <motion.div
-  initial={{ opacity: 0, zIndex: 2 }} // Set zIndex to 2 to be behind the text
-  animate={{
-    opacity: isRectReceding ? 1 : 0, // Show background when rect is receding
-  }}
-  transition={{ ease: "easeInOut", duration: 0.9 }}
-  style={{
-    background: "black", // Set the background color
-    padding: "60px 400px", // Adjust padding as needed
-    borderRadius: "5px", // Adjust border radius as needed
-    position: "absolute",
-    width: "fit-content", // Make the width fit the content
-    top: "-5%", // Adjust top position as needed
-    left: "12.7%", // Adjust left position as needed
-    zIndex: 2, // Set zIndex to be behind the text
-  }}
-></motion.div>
+          initial={{ opacity: 0, zIndex: 2 }} // Set zIndex to 2 to be behind the text
+          animate={{
+            opacity: isRectReceding ? 1 : 0, // Show background when rect is receding
+          }}
+          transition={{ ease: "easeInOut", duration: 0.9 }}
+          style={{
+            background: "black", // Set the background color
+            padding: "60px 400px", // Adjust padding as needed
+            borderRadius: "3px", // Adjust border radius as needed
+            position: "absolute",
+            width: "fit-content", // Make the width fit the content
+            top: "-5%", // Adjust top position as needed
+            left: "12.7%", // Adjust left position as needed
+            zIndex: 2, // Set zIndex to be behind the text
+          }}
+        ></motion.div>
         <motion.div
           initial={{ opacity: 0, zIndex: 3 }}
           animate={{
@@ -85,13 +82,35 @@ const startAnimation = () => {
             left: "-9.7%",
             zIndex: isRectReceding ? 0 : 3, // Show behind rectangle when rect is receding
             fontFamily: "Roboto Mono",
-            
           }}
         >
-          From Dublin Ireland
+           From Dublin Ireland
         </motion.div>
-         {/* Grey line */}
-         <motion.div
+        {/* Container for the TypeAnimation */}
+        <motion.div
+          initial={{ opacity: 0, zIndex: 3 }}
+          animate={{
+            opacity: isRectReceding ? 1 : 0, // Show TypeAnimation when rect is receding
+          }}
+          transition={{ ease: "easeInOut", duration: 0.9 }} // Use easeInOut
+          style={{
+            position: "absolute",
+            top: "10%", // Adjust top position as needed
+            left: "66%", // Adjust left position as needed
+            zIndex: isRectReceding ? 0 : 5, // Show behind rectangle when rect is receding
+            fontFamily: "Roboto Mono",
+          }}
+        >
+          {/* TypeAnimation */}
+          <TypeAnimation
+            sequence={["", 1, ""]}
+            speed={20}
+            style={{ whiteSpace: "pre-line", fontSize: "3.1em" }}
+            repeat={0}
+          />
+        </motion.div>
+        {/* Grey line */}
+        <motion.div
           initial={{ width: 0 }}
           animate={{ width: "53.5%" }}
           transition={{ duration: 1.5 }} // Adjust the duration as needed

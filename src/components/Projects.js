@@ -8,7 +8,7 @@ function Projects() {
      
       <h2>Projects</h2>
       <div className="project">
-        <h3>Project 1</h3>
+        <h3>Project Stuff here!!!!</h3>
         <p>This is a description of your first project.</p>
       </div>
       <div className="project">

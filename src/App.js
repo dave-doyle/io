@@ -8,6 +8,7 @@ import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import CloudsBackground from './components/CloudsBackground';
 import CellsBackground from './components/CellsBackground';
 import SketchfabEmbed from './components/SketchfabEmbed'; // Import the new component
+import SecondEmbed from './components/SecondEmbed';
 
 
 
@@ -17,7 +18,8 @@ function App() {
       <div className="App">
        <CellsBackground/>
         <PageMenu/>
-        <SketchfabEmbed />
+        {/* <SketchfabEmbed />*/} {/*Gis 3d model */}
+        <SecondEmbed/> {/*Computer 3d model*/}
 
         <div className="content">
           <About />

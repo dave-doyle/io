@@ -11,7 +11,7 @@ const PageMenu = () => {
   useEffect(() => {
     const visibilityTimeout = setTimeout(() => {
       setIsMenuVisible(true);
-    }, 5000); // Set the delay time in milliseconds
+    }, 3000); // Set the delay time in milliseconds
 
     return () => clearTimeout(visibilityTimeout);
   }, []);
