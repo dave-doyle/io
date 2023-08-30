@@ -32,8 +32,8 @@ const startAnimation = () => {
           {isAnimating && (
             <motion.div
               initial={{ width: 0, left: "60%" }}
-              animate={{ width: "61%", left: "-1%" }}
-              exit={{ width: 0, left: "-1.1%", duration: 0.05 }}
+              animate={{ width: "53%", left: "14%" }}
+              exit={{ width: 0, left: "14%", duration: 0.05 }}
               transition={{
                 // Use easeInOut for smoother transition
                 duration: 0.9, // Increase the duration
