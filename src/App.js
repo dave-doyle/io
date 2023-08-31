@@ -23,10 +23,10 @@ function App() {
         <div className="content">
           <About />
           <div className="grid">
-            <div className="project">
+            <div className="project" >
               <Projects />
             </div>
-            <div className="contact">
+            <div className="contact" >
               <Contact />
             </div>
           </div>

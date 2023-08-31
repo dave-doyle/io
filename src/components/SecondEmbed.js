@@ -27,8 +27,8 @@ const SecondEmbed = () => {
           api.addEventListener("viewerready", function () {
             console.log("Viewer is ready");
 
-            // const cameraPosition = [5, -200, 100];
-            // const cameraTarget = [0, 0, 30];
+            // const cameraPosition = [5, -190, 100];
+            // const cameraTarget = [0, 30, 1];
             // const duration = 0.5;
 
             // api.setCameraLookAt(

@@ -32,12 +32,12 @@ function About() {
       color="white"
       marginBottom={"100px"}
       marginTop={"150px"}
-      marginLeft={"150px"}
+      marginLeft={"90px"}
     >
       <Heading
         fontWeight={"extrabold"}
         as="h2"
-        fontSize="4xl"
+        fontSize="5xl"
         mb="4"
         paddingLeft={"185px"}
         paddingBottom={"19px"}
@@ -54,14 +54,14 @@ function About() {
         {/* Grey line */}
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "16.5%" }}
-          transition={{ duration: 3.2 }} // Adjust the duration as needed
+          animate={{ width: "21.5%" }}
+          transition={{ duration: 2.2 }} // Adjust the duration as needed
           style={{
             height: "1px",
             background: "grey",
             position: "absolute",
-            top: "12.5%",
-            left: "23.6%",
+            top: "11.1%",
+            left: "19.8%",
             zIndex: 3,
           }}
         ></motion.div>
@@ -70,12 +70,12 @@ function About() {
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: "81.8%" }}
-          transition={{ duration: 3.2 }} // Adjust the duration as needed
+          transition={{ duration: 2.2 }} // Adjust the duration as needed
           style={{
-            height: "110px",
+            height: "215px",
             background: "black",
             position: "absolute",
-            top: "15.5%",
+            top: "13.55%",
             left: "18.1%",
             zIndex: -1,
             borderRadius: "3px",
@@ -86,7 +86,7 @@ function About() {
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: "99.9%" }}
-          transition={{ duration: 3.2 }} // Adjust the duration as needed
+          transition={{ duration: 2.2 }} // Adjust the duration as needed
           style={{
             height: "255px",
             background: "black",
@@ -105,12 +105,13 @@ function About() {
         <div className="container" style={{ display: "flex" }}>
           <Text
             borderRadius={"3px"}
-            paddingRight={"30px"}
-            paddingLeft={"30px"}
+            paddingRight={"40px"}
+            paddingLeft={"50px"}
             bg={"black"}
             fontSize="6xl"
             fontWeight={900}
             fontFamily="Font2, roboto mono"
+            marginLeft={-9}
           >
             <Scrambler
               phrases={phrase_2}
@@ -124,13 +125,13 @@ function About() {
       </div>
       <br></br>
 
-      {isGrayLine1Visible && ( // Render gray line 1 when isGrayLine1Visible is true
+      {/* {isGrayLine1Visible && ( // Render gray line 1 when isGrayLine1Visible is true
         <motion.div
         initial={{ height: 0 }}
         animate={{ height: "94px" }} // Change height to show vertical line
         transition={{ duration: 2 }} // Adjust the duration as needed
         style={{
-          width: "3.5px", // Change width to show vertical line
+          width: "1px", // Change width to show vertical line
           background: "grey",
           position: "absolute",
           top: "16.5%",
@@ -146,7 +147,7 @@ function About() {
         animate={{ width: "87.37px" }}
         transition={{ duration: 2 }} // Adjust the duration as needed
         style={{
-          height: "3px",
+          height: "1px",
           background: "grey",
           position: "absolute",
           top: "20.6%",
@@ -154,7 +155,7 @@ function About() {
           zIndex: 3,
         }}
       ></motion.div>
-      )}
+      )} */}
 
       <RevealText />
     </Box>

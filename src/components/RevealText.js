@@ -60,7 +60,7 @@ function RevealText() {
             position: "absolute",
             width: "fit-content", // Make the width fit the content
             top: "-7%", // Adjust top position as needed
-            left: "7.7%", // Adjust left position as needed
+            left: "11.7%", // Adjust left position as needed
             zIndex: 2, // Set zIndex to be behind the text
           }}
         ></motion.div>

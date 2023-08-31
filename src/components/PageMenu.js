@@ -100,7 +100,7 @@ const PageMenu = () => {
   animate={{ height: "100%" }} // Animate height to cover the screen
   transition={{ duration: 3.2 }} // Adjust the duration as needed
   style={{
-    width: "19%", // Set width to cover the screen horizontally
+    width: "19.2%", // Set width to cover the screen horizontally
     background: "black",
     position: "absolute",
     top: 0,

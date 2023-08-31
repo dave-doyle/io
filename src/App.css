@@ -14,18 +14,22 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  margin-top: 20px; /* Add margin between sections */
+  margin-top: 20px; 
+  padding-top: 20px; /* Add padding between sections */
+  padding-left: 200px; /* Add padding to the left */
 }
 
 
 .project {
   padding: 20px;
   margin-top: 20px; /* Add margin between sections */
+  order: 1;
 }
 
 .contact {
   padding: 20px;
   margin-top: 20px; /* Add margin between sections */
+  order: 2;
 }
 
 
