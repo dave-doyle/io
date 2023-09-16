@@ -60,7 +60,7 @@ const SketchfabEmbed = () => {
         <div
           id="sketchfab-container"
           className="sketchfab-embed-wrapper"
-          style={{ position: "fixed", width: "18%", height: "100%" }}
+          style={{ position: "fixed", width: "18%", height: "100%" ,zIndex:'4'}}
         >
           <iframe
             id="sketchfab-iframe"
@@ -88,6 +88,7 @@ const SketchfabEmbed = () => {
               width: "100%",
               height: "220px",
               background: "black",
+              zIndex:'5'
             }}
           />
         </div>

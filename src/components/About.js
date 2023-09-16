@@ -55,12 +55,12 @@ function About() {
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: "21.5%" }}
-          transition={{ duration: 2.2 }} // Adjust the duration as needed
+          transition={{ duration: 2.0 }} // Adjust the duration as needed
           style={{
             height: "1px",
             background: "grey",
             position: "absolute",
-            top: "11.1%",
+            top: "21.1%",
             left: "19.8%",
             zIndex: 3,
           }}
@@ -69,29 +69,30 @@ function About() {
         {/* black background */}
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "81.8%" }}
+          animate={{ width: "81.9%" }}
           transition={{ duration: 2.2 }} // Adjust the duration as needed
           style={{
-            height: "215px",
+            height: "210px",
             background: "black",
             position: "absolute",
-            top: "13.55%",
+            top: "22.8%",
             left: "18.1%",
             zIndex: -1,
             borderRadius: "3px",
           }}
         ></motion.div>
 
-        {/* black background  top*/}
+        {/* black background top*/}
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "99.9%" }}
+          animate={{ width: "99.99%" }}
           transition={{ duration: 2.2 }} // Adjust the duration as needed
           style={{
-            height: "255px",
+            height: "260px",
+            
             background: "black",
             position: "absolute",
-            top: "0%",
+            top: "-1%",
             left: "0%",
             zIndex: -1,
             borderRadius: "3px",

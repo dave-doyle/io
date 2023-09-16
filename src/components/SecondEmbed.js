@@ -9,7 +9,7 @@ const SecondEmbed = () => {
     // Simulate a delay before showing the component
     const delayTimeout = setTimeout(() => {
       setIsDelayed(false); // Set the delay to false after the timeout
-    }, 1400);
+    }, 2000);
 
     return () => clearTimeout(delayTimeout);
   }, []);
@@ -60,7 +60,7 @@ const SecondEmbed = () => {
         <div
           id="sketchfab-container"
           className="sketchfab-embed-wrapper"
-          style={{ position: "fixed", width: "18%", height: "100%" }}
+          style={{ position: "fixed", width: "18%", height: "100%",zIndex:'1' }}
         >
           <iframe
             id="sketchfab-iframe"
@@ -103,7 +103,7 @@ const SecondEmbed = () => {
           position: "absolute",
           top: 0,
           left: "0%",
-          zIndex: -1,
+          zIndex: -3,
         }}
       ></motion.div>
     </div>

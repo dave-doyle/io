@@ -60,6 +60,7 @@ const PageMenu = () => {
       initial={{ opacity: 0 }} // Initial opacity is 0
       animate={{ opacity: isMenuVisible ? 1 : 0 }} // Animate to 1 when visible
       transition={{ duration: 0.5 }} // Adjust the duration as needed
+      style
     >
       <ul  data-offset="10">
         <li className="Menu-list-item" data-offset="20" onClick={() => {}}>
@@ -105,7 +106,7 @@ const PageMenu = () => {
     position: "absolute",
     top: 0,
     left: "0%",
-    zIndex: -1,
+    zIndex: 1,
   }}
 ></motion.div>
 
