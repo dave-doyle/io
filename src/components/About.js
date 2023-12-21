@@ -60,7 +60,7 @@ function About() {
             height: "1px",
             background: "grey",
             position: "absolute",
-            top: "21.1%",
+            top: "18.4%",
             left: "19.8%",
             zIndex: 3,
           }}

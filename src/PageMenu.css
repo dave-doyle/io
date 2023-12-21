@@ -50,7 +50,7 @@
   color: #b0b0b0;
   top: 0;
   height: 49%;
-  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  transition: all 2.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
 }
 
 .Mask span {
@@ -60,19 +60,19 @@
 .Mask + .Mask {
   top: -0.1%;
   height: 100.1%;
-  span {
-    transform: translateY(-49%);
-  }
+  /* span {
+    transform: translateY(-15%);
+  } */
 }
 
 .Menu-list-item:hover,
 .Menu-list-item:active {
   .Mask {
     color: #9e7676;
-    transform: skewX(12deg) translateX(5px);
+    transform: skewX(25deg) translateX(2px);
   }
   .Mask + .Mask {
-    transform: skewX(12deg) translateX(-5px);
+    transform: skewX(30deg) translateX(1px);
   }
   &::before {
     transform: scale(1);

@@ -16,7 +16,7 @@ function App() {
   return (
     <ChakraProvider>
       <div className="App">
-        <CellsBackground />
+        <CloudsBackground />
         <PageMenu />
         <SecondEmbed />
 
