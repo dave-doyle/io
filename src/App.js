@@ -9,29 +9,27 @@ import CloudsBackground from './components/CloudsBackground';
 import CellsBackground from './components/CellsBackground';
 import SketchfabEmbed from './components/SketchfabEmbed'; // Import the new component
 import SecondEmbed from './components/SecondEmbed';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 
 function App() {
   return (
     <ChakraProvider>
+      <Router>
       <div className="App">
-        <CloudsBackground />
+        <CellsBackground />
         <PageMenu />
         <SecondEmbed />
+        
 
-        <div className="content">
-          <About />
-          <div className="grid">
-            <div className="project" >
-              <Projects />
-            </div>
-            <div className="contact" >
-              <Contact />
-            </div>
-          </div>
-        </div>
+        <Routes>
+        <Route index element={<About />} />
+            <Route path="/projects" element={<Projects/>} />
+            <Route path="/contact" element={<Contact/>} />
+          </Routes>
       </div>
+      </Router>
     </ChakraProvider>
   );
 }

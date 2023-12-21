@@ -32,14 +32,14 @@ function About() {
       color="white"
       marginBottom={"100px"}
       marginTop={"150px"}
-      marginLeft={"90px"}
+      marginLeft={"101px"}
     >
       <Heading
         fontWeight={"extrabold"}
         as="h2"
         fontSize="5xl"
         mb="4"
-        paddingLeft={"185px"}
+        paddingLeft={"198px"}
         paddingBottom={"19px"}
         color={"#a2a1a1"}
       >
@@ -60,7 +60,7 @@ function About() {
             height: "1px",
             background: "grey",
             position: "absolute",
-            top: "18.4%",
+            top: "32.4%",
             left: "19.8%",
             zIndex: 3,
           }}
@@ -125,38 +125,6 @@ function About() {
         </div>
       </div>
       <br></br>
-
-      {/* {isGrayLine1Visible && ( // Render gray line 1 when isGrayLine1Visible is true
-        <motion.div
-        initial={{ height: 0 }}
-        animate={{ height: "94px" }} // Change height to show vertical line
-        transition={{ duration: 2 }} // Adjust the duration as needed
-        style={{
-          width: "1px", // Change width to show vertical line
-          background: "grey",
-          position: "absolute",
-          top: "16.5%",
-          left: "70.6%",
-          zIndex: 3,
-        }}
-      ></motion.div>
-      )}
-
-      {isGrayLine2Visible && ( // Render gray line 2 when isGrayLine2Visible is true
-        <motion.div
-        initial={{ width: 0 }}
-        animate={{ width: "87.37px" }}
-        transition={{ duration: 2 }} // Adjust the duration as needed
-        style={{
-          height: "1px",
-          background: "grey",
-          position: "absolute",
-          top: "20.6%",
-          left: "70%",
-          zIndex: 3,
-        }}
-      ></motion.div>
-      )} */}
 
       <RevealText />
     </Box>

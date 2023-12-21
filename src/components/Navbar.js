@@ -17,7 +17,7 @@ function Navbar() {
           <Text
             className="vertical-text" // Add a class for vertical text rotation
             cursor="pointer"
-            onClick={() => scrollToSection('Abouttttt')}
+            onClick={() => scrollToSection('About')}
           >
             About
           </Text>
