@@ -5,10 +5,8 @@ import About_Me from './components/About_Me';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import PageMenu from './components/PageMenu';
-import { ChakraProvider, CSSReset } from '@chakra-ui/react';
-import CloudsBackground from './components/CloudsBackground';
+import { ChakraProvider } from '@chakra-ui/react';
 import CellsBackground from './components/CellsBackground';
-import SketchfabEmbed from './components/SketchfabEmbed'; // Import the new component
 import SecondEmbed from './components/SecondEmbed';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 

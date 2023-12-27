@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Sketchfab from "@sketchfab/viewer-api";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion} from "framer-motion";
 
 const SecondEmbed = () => {
   const [isDelayed, setIsDelayed] = useState(true);

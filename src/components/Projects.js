@@ -1,6 +1,6 @@
 import {
   Image,
-  Box,
+  
   Heading,
   Card,
   CardBody,

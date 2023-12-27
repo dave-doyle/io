@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import Scrambler from "./Scrambler.js";
-import { TypeAnimation } from "react-type-animation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion} from "framer-motion";
 import RevealText from "./RevealText.js";
 
 function About() {
