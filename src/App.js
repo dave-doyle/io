@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import About from './components/About';
+import About_Me from './components/About_Me';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import PageMenu from './components/PageMenu';
@@ -25,6 +26,7 @@ function App() {
 
         <Routes>
         <Route index element={<About />} />
+        <Route path="/about_me" element={<About_Me/>} />
             <Route path="/projects" element={<Projects/>} />
             <Route path="/contact" element={<Contact/>} />
           </Routes>

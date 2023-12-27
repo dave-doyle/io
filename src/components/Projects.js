@@ -1,5 +1,18 @@
-import { Box, Heading } from "@chakra-ui/react";
+import {
+  Image,
+  Box,
+  Heading,
+  Card,
+  CardBody,
+  SimpleGrid,
+  CardFooter,
+  Button,
+  CardHeader,
+  Text,
+} from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Projects() {
   const projects = [
@@ -8,34 +21,58 @@ function Projects() {
       description:
         "Project built to gamify travel across Manhattan NYC. Offering route building, check-in features, and collecting unique NFT badges to commemorate your travels.",
       githubLink: "https://github.com/dave-doyle/Tourify",
-      imageSrc: "/tourify.png", 
+      imageSrc: "/tourify.png",
     },
     {
       title: "Dublin Bikes",
       description:
-        "This is a description of your second project. ...",
+        "Web application that predicts real-time availability data for Dublin City public bikes.",
       githubLink: "https://github.com/dave-doyle/Dublin-Bikes-Project",
-      imageSrc: "/project2.png", 
+      imageSrc: "/DublinBikes.png",
     },
     // Add more projects similarly
   ];
 
   return (
-    <Box id="project" color="white" marginLeft="40%">
-      <Heading as="h2" fontSize="2xl">
-        Projects
-      </Heading>
+    <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"400px"}>
+
+    <AnimatePresence>
       {projects.map((project, index) => (
-        <div key={index} className="project">
-          <img src={project.imageSrc} alt={project.title} style={{ width: '200px', height: 'auto' }} />
-          <h3>{project.title}</h3>
-          <p>{project.description}</p>
-          <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-            View on GitHub
-          </a>
-        </div>
+        <motion.div
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 2.5 }}
+        >
+            <Card
+              backgroundColor={"black"}
+              borderWidth="1px"
+              borderRadius="lg"
+              p="4"
+              maxWidth="350px"
+              height="100%"
+            >
+              <CardHeader>
+                <Heading size="md" textColor={"white"}>
+                  {project.title}
+                </Heading>
+              </CardHeader>
+              <Image src={project.imageSrc} alt={"text"} />
+              <CardBody>
+                <Text textColor={"white"}>{project.description}</Text>
+              </CardBody>
+              <CardFooter>
+                <Link to={project.githubLink}>
+                  <Button>View here</Button>
+                </Link>
+              </CardFooter>
+            </Card>
+          
+        </motion.div>
       ))}
-    </Box>
+    </AnimatePresence>
+    </SimpleGrid>
   );
 }
 

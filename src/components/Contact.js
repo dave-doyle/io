@@ -1,37 +1,85 @@
-import React from 'react';
-import { Box } from '@chakra-ui/react';
+import React from "react";
+import {
+  Box,
+  SimpleGrid,
+  Card,
+  CardBody,
+  Image,
+  CardHeader,
+  Heading,
+} from "@chakra-ui/react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
+
 function Contact() {
-
-
-  // Style for the images
-  const imageStyle = {
-    width: '140px', // Adjust the width as needed
-    height: 'auto', // This will maintain the aspect ratio
-    marginRight: '10px', // Space between images
-    marginBottom: '20px', // Add space below the heading
-  };
-
-  const divStyle ={
-    display: 'flex',
-    alignItems: 'center'
-  }
-  const headingStyle ={
-    fontSize: '50px', // Adjust the font size as needed
-    color: 'white', // Change the text color if desired
-    marginBottom: '20px', // Add space below the heading
-
-  }
-
   return (
-    <Box id="contact" marginLeft="40%" position='absolute'>
-      <h2 style={headingStyle}>Contact Me</h2>
-      <div style={divStyle}>
-      <a href="https://www.linkedin.com/in/david-doyle-dev/" target="_blank" rel="noopener noreferrer">
-      <img src="/linkedin.png" alt="LinkedIn" style={imageStyle}/>      </a>
-      <a href="https://github.com/dave-doyle" target="_blank" rel="noopener noreferrer">
-      <img src="/githublogo.png" alt="GitHub" style={imageStyle} />     </a>
-    </div>
-    </Box>
+    
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 2.5 }}
+        >
+          <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"400px"}>
+          <Box>
+          <Card
+            backgroundColor={"black"}
+            borderWidth="1px"
+            borderRadius="lg"
+            p="4"
+            maxWidth="350px"
+            marginRight="20px"
+          >
+            <CardHeader>
+              <Heading size="md" textColor={"white"}>
+                {" "}
+                Contact Me
+              </Heading>
+            </CardHeader>
+            <CardBody>
+              <Link to="https://www.linkedin.com/in/david-doyle-dev/">
+                <Image
+                  src={"/linkedin.png"}
+                  alt={"LinkedIn"}
+                  borderRadius="1g"
+                />
+              </Link>
+            </CardBody>
+          </Card>
+          </Box>
+
+          <Box>
+
+          <Card
+            backgroundColor={"black"}
+            borderWidth="1px"
+            borderRadius="lg"
+            p="4"
+            maxWidth="350px"
+          >
+            <CardHeader>
+              <Heading size="md" textColor={"white"}>
+                {" "}
+                Contact Me
+              </Heading>
+            </CardHeader>
+
+            <CardBody>
+              <Link to="https://github.com/dave-doyle">
+                <Image
+                  src={"/githublogo.png"}
+                  alt={"Github"}
+                  borderRadius="1g"
+                />
+              </Link>
+            </CardBody>
+          </Card>
+          </Box>
+          </SimpleGrid>
+        </motion.div>
+      </AnimatePresence>
+    
   );
 }
 

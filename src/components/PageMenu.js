@@ -74,10 +74,22 @@ const PageMenu = () => {
               About
             
             <span className="Mask">
-              <span>About</span>
+              <span>Home</span>
             </span>
             <span className="Mask">
-              <span>About</span>
+              <span>Home</span>
+            </span>
+            </Link>
+          </li>
+
+          <li className="Menu-list-item">
+          <Link to="/about_me" style={{ zIndex: 10 }}>About Me
+            <span className="Mask">
+            
+              <span>About Me</span>
+            </span>
+            <span className="Mask">
+              <span>About Me</span>
             </span>
             </Link>
           </li>
@@ -111,10 +123,10 @@ const PageMenu = () => {
       {/* black background */}
       <motion.div
         initial={{ height: 0, top: 0 }} // Set initial height to 0
-        animate={{ height: "100%" }} // Animate height to cover the screen
+        animate={{ height: "113%" }} // Animate height to cover the screen
         transition={{ duration: 3.2 }} // Adjust the duration as needed
         style={{
-          width: "19.2%", // Set width to cover the screen horizontally
+          width: '279px', // Set width to cover the screen horizontally
           background: "black",
           position: "absolute",
           top: 0,

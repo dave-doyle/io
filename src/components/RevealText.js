@@ -83,8 +83,7 @@ function RevealText() {
             zIndex: isRectReceding ? 0 : 3, // Show behind rectangle when rect is receding
             fontFamily: "Roboto Mono",
           }}
-        >
-           From Dublin Ireland
+        >From Dublin Ireland
         </motion.div>
         {/* Container for the TypeAnimation */}
         <motion.div
