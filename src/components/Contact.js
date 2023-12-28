@@ -25,7 +25,7 @@ function Contact() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 3.5 }}
+        transition={{ duration: 3.5, delay: 0.6}}
       >
         <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"400px"}>
           <Box>

@@ -51,7 +51,7 @@ function Projects() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 2.5 }}
+              transition={{ duration: 2.5, delay: 1.5}}
             >
               <Card
                 backgroundColor={"black"}
