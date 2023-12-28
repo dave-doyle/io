@@ -38,10 +38,10 @@ function Projects() {
   ];
 
   const initialDelay1 = 70;
-  const initialDelay2 = 30;
+  const initialDelay2 = 2;
 
   const revealDuration1 = 200;
-  const revealDuration2 = 1;
+  const revealDuration2 = 10;
 
 
 
@@ -92,9 +92,16 @@ function Projects() {
                   /></Text>
               </CardBody>
               <CardFooter>
+              <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 2.5 }}
+                  >
                 <Link to={project.githubLink}>
                   <Button>View here</Button>
                 </Link>
+                </motion.div>
               </CardFooter>
             </Card>
           

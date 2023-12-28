@@ -12,12 +12,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import Scrambler from "./Scrambler.js";
 
-
 function Contact() {
   const phrase_1 = ["Contact Me On LinkedIn"];
   const phrase_2 = ["Contact Me On Github"];
 
-  const initialDelay1 = 20;
+  const initialDelay1 = 700;
 
   const revealDuration1 = 50;
   return (
@@ -53,11 +52,18 @@ function Contact() {
               </CardHeader>
               <CardBody>
                 <Link to="https://www.linkedin.com/in/david-doyle-dev/">
-                  <Image
-                    src={"/linkedin.png"}
-                    alt={"LinkedIn"}
-                    borderRadius="1g"
-                  />
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 1.9 }}
+                  >
+                    <Image
+                      src={"/linkedin.png"}
+                      alt={"LinkedIn"}
+                      borderRadius="1g"
+                    />
+                  </motion.div>
                 </Link>
               </CardBody>
             </Card>
@@ -87,11 +93,18 @@ function Contact() {
 
               <CardBody>
                 <Link to="https://github.com/dave-doyle">
-                  <Image
-                    src={"/githublogo.png"}
-                    alt={"Github"}
-                    borderRadius="1g"
-                  />
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 1.9 }}
+                  >
+                    <Image
+                      src={"/githublogo.png"}
+                      alt={"Github"}
+                      borderRadius="1g"
+                    />
+                  </motion.div>
                 </Link>
               </CardBody>
             </Card>
