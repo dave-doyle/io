@@ -5,15 +5,26 @@ import {
   Card,
   CardBody,
   SimpleGrid,
-  
-  
   CardHeader,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import Scrambler from "./Scrambler.js";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 function About_Me() {
+  const phrase_1 = ["About Me"];
+  const phrase_2 = [
+    "Hi Im David, a software developer from Dublin Ireland. I have a masters in computer science from UCD and enjoy making full stack applications with React. In my free time I like training jiu jitsu and learning Japanese. UCDでコンピューターサイエンスの修士課程に在籍しています。",
+  ];
+
+  const initialDelay1 = 50;
+  const initialDelay2 = 2;
+
+  const revealDuration1 = 150;
+  const revealDuration2 = 10;
+
   return (
     <AnimatePresence>
       <motion.div
@@ -29,26 +40,41 @@ function About_Me() {
               borderRadius="lg"
               p="4"
               maxWidth="350px"
+              maxHeight={"5000px"}
               backgroundColor={"black"}
             >
               <CardHeader>
                 <Heading size="md" textColor={"white"}>
                   {" "}
-                  About Me
+                  <Scrambler
+                    phrases={phrase_1}
+                    initialDelay={initialDelay1}
+                    revealDuration={revealDuration1}
+                    fontSize="md"
+                    fontFamily="Roboto Mono"
+                    fontWeight={700}
+                  />
                 </Heading>
               </CardHeader>
 
-              <Image src={"/profile_pic.jpg"} alt={"profile picture"} borderRadius="lg" />
-              <CardBody>
-                <Text fontSize={"md"} textColor={"white"}>
-                  Hi Im David, a software developer from Dublin Ireland. I have
-                  a masters in computer science from UCD and enjoy making full
-                  stack applications with React. In my free time I like training
-                  jiu jitsu and learning Japanese.
-                  UCDでコンピューターサイエンスの修士課程に在籍しています。
-                </Text>
+              <Image
+                src={"/profile_pic.jpg"}
+                alt={"profile picture"}
+                borderRadius="lg"
+              />
+              <CardBody size="md" textColor={"white"}>
+                
+                
+                  <Scrambler
+                    phrases={phrase_2}
+                    initialDelay={initialDelay2}
+                    revealDuration={revealDuration2}
+                    fontSize="md"
+                    fontFamily="Roboto Mono"
+                    fontWeight={700}
+                  />
+                
               </CardBody>
-
             </Card>
           </Box>
         </SimpleGrid>

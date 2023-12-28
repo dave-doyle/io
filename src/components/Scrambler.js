@@ -59,7 +59,7 @@ const Scrambler = ({ phrases, initialDelay, revealDuration, fontFamily }) => {
   return (
     <div
       className="text"
-      style={{ fontFamily, fontSize: "1em", whiteSpace: "nowrap", opacity }}
+      style={{ fontFamily, fontSize: "1em", whiteSpace: "pre-wrap", opacity }}
     >
       {displayedText}
     </div>

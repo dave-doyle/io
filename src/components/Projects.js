@@ -13,8 +13,12 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import Scrambler from "./Scrambler.js";
+
 
 function Projects() {
+
+
   const projects = [
     {
       title: "Tourify",
@@ -32,6 +36,14 @@ function Projects() {
     },
     // Add more projects similarly
   ];
+
+  const initialDelay1 = 70;
+  const initialDelay2 = 30;
+
+  const revealDuration1 = 200;
+  const revealDuration2 = 1;
+
+
 
   return (
     <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"400px"}>
@@ -55,12 +67,29 @@ function Projects() {
             >
               <CardHeader>
                 <Heading size="md" textColor={"white"}>
-                  {project.title}
+                  <Scrambler
+                  phrases={[project.title]}
+                  initialDelay={initialDelay1}
+                    revealDuration={revealDuration1}
+                    fontSize="md"
+                    fontFamily="Roboto Mono"
+                    fontWeight={700}
+                  
+                  />
                 </Heading>
               </CardHeader>
               <Image src={project.imageSrc} alt={"text"} />
               <CardBody>
-                <Text textColor={"white"}>{project.description}</Text>
+                <Text textColor={"white"}>
+                <Scrambler
+                  phrases={[project.description]}
+                  initialDelay={initialDelay2}
+                    revealDuration={revealDuration2}
+                    fontSize="md"
+                    fontFamily="Roboto Mono"
+                    fontWeight={700}
+                  
+                  /></Text>
               </CardBody>
               <CardFooter>
                 <Link to={project.githubLink}>
