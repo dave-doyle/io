@@ -25,7 +25,7 @@ function Contact() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 2.5 }}
+        transition={{ duration: 3.5 }}
       >
         <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"400px"}>
           <Box>
@@ -111,7 +111,26 @@ function Contact() {
           </Box>
         </SimpleGrid>
       </motion.div>
+
+
+      {/* black background top*/}
+      <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: "99.99%" }}
+          transition={{ duration: 1.2 }} // Adjust the duration as needed
+          style={{
+            height: "470px",
+            
+            background: "black",
+            position: "absolute",
+            top: "-1%",
+            left: "0%",
+            zIndex: -1,
+            borderRadius: "3px",
+          }}
+        ></motion.div>
     </AnimatePresence>
+    
   );
 }
 

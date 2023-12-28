@@ -1,6 +1,5 @@
 import {
   Image,
-  
   Heading,
   Card,
   CardBody,
@@ -15,10 +14,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Scrambler from "./Scrambler.js";
 
-
 function Projects() {
-
-
   const projects = [
     {
       title: "Tourify",
@@ -41,74 +37,105 @@ function Projects() {
   const initialDelay2 = 2;
 
   const revealDuration1 = 200;
-  const revealDuration2 = 10;
-
-
+  const revealDuration2 = 13;
 
   return (
-    <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"400px"}>
-
-    <AnimatePresence>
-      {projects.map((project, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 2.5 }}
-        >
-            <Card
-              backgroundColor={"black"}
-              borderWidth="1px"
-              borderRadius="lg"
-              p="4"
-              maxWidth="350px"
-              height="100%"
+    <div style={{ position: "relative", minHeight: "100vh" }}>
+      {" "}
+      {/* Parent container */}
+      <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"400px"}>
+        <AnimatePresence>
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 2.5 }}
             >
-              <CardHeader>
-                <Heading size="md" textColor={"white"}>
-                  <Scrambler
-                  phrases={[project.title]}
-                  initialDelay={initialDelay1}
-                    revealDuration={revealDuration1}
-                    fontSize="md"
-                    fontFamily="Roboto Mono"
-                    fontWeight={700}
-                  
-                  />
-                </Heading>
-              </CardHeader>
-              <Image src={project.imageSrc} alt={"text"} />
-              <CardBody>
-                <Text textColor={"white"}>
-                <Scrambler
-                  phrases={[project.description]}
-                  initialDelay={initialDelay2}
-                    revealDuration={revealDuration2}
-                    fontSize="md"
-                    fontFamily="Roboto Mono"
-                    fontWeight={700}
-                  
-                  /></Text>
-              </CardBody>
-              <CardFooter>
-              <motion.div
+              <Card
+                backgroundColor={"black"}
+                borderRadius="lg"
+                p="4"
+                maxWidth="350px"
+                height="100%"
+              >
+                <CardHeader>
+                  <Heading size="md" textColor={"white"}>
+                    <Scrambler
+                      phrases={[project.title]}
+                      initialDelay={initialDelay1}
+                      revealDuration={revealDuration1}
+                      fontSize="md"
+                      fontFamily="Roboto Mono"
+                      fontWeight={700}
+                    />
+                  </Heading>
+                </CardHeader>
+                <Image src={project.imageSrc} alt={"text"} />
+                <CardBody>
+                  <Text textColor={"white"}>
+                    <Scrambler
+                      phrases={[project.description]}
+                      initialDelay={initialDelay2}
+                      revealDuration={revealDuration2}
+                      fontSize="md"
+                      fontFamily="Roboto Mono"
+                      fontWeight={700}
+                    />
+                  </Text>
+                </CardBody>
+                <CardFooter>
+                  <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 2.5 }}
+                    transition={{ duration: 0.5, delay: 3.5 }}
                   >
-                <Link to={project.githubLink}>
-                  <Button>View here</Button>
-                </Link>
-                </motion.div>
-              </CardFooter>
-            </Card>
-          
-        </motion.div>
-      ))}
-    </AnimatePresence>
-    </SimpleGrid>
+                    <Link to={project.githubLink}>
+                      <Button>View here</Button>
+                    </Link>
+                  </motion.div>
+                </CardFooter>
+              </Card>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </SimpleGrid>
+      {/* black background right to left*/}
+      <motion.div
+        initial={{ width: 0 }}
+        animate={{ width: "99.99%" }}
+        transition={{ duration: 1.6 }} // Adjust the duration as needed
+        style={{
+          height: "73%",
+
+          background: "black",
+          position: "absolute",
+          top: "-1%",
+          left: "0%",
+          zIndex: -1,
+          borderRadius: "3px",
+        }}
+      ></motion.div>
+      {/* Black background motion div bottom up */}
+      <motion.div
+        initial={{ height: 0, width: "100%", bottom: 0 }}
+        animate={{
+          height: ["0%", "50%", "50%"], // Extend to 50% height
+          width: ["100%", "100%", "0%"], // Decrease width to 0%
+          transition: {
+            duration: 3.8, // Total animation duration
+          },
+        }}
+        style={{
+          background: "black",
+          position: "absolute",
+          zIndex: -1,
+          borderRadius: "3px",
+        }}
+      />
+    </div>
   );
 }
 
