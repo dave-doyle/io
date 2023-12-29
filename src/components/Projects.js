@@ -37,7 +37,7 @@ function Projects() {
   const initialDelay2 = 2;
 
   const revealDuration1 = 200;
-  const revealDuration2 = 13;
+  const revealDuration2 = 20;
 
   return (
     <div style={{ position: "relative", minHeight: "100vh" }}>
@@ -90,7 +90,7 @@ function Projects() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 3.5 }}
+                    transition={{ duration: 0.5, delay: 4.8 }}
                   >
                     <Link to={project.githubLink}>
                       <Button>View here</Button>
@@ -108,7 +108,7 @@ function Projects() {
         animate={{ width: "99.99%" }}
         transition={{ duration: 1.6 }} // Adjust the duration as needed
         style={{
-          height: "73%",
+          height: "548px",
 
           background: "black",
           position: "absolute",
@@ -125,7 +125,7 @@ function Projects() {
           height: ["0%", "50%", "50%"], // Extend to 50% height
           width: ["100%", "100%", "0%"], // Decrease width to 0%
           transition: {
-            duration: 3.8, // Total animation duration
+            duration: 3.8, delay: 1.4 // Total animation duration
           },
         }}
         style={{

@@ -116,7 +116,7 @@ function Contact() {
       {/* black background top*/}
       <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "99.99%" }}
+          animate={{ width: "100vw" }}
           transition={{ duration: 1.2 }} // Adjust the duration as needed
           style={{
             height: "470px",

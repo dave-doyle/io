@@ -4,6 +4,19 @@ import { motion} from "framer-motion";
 
 const SecondEmbed = () => {
   const [isDelayed, setIsDelayed] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     // Simulate a delay before showing the component
@@ -15,7 +28,7 @@ const SecondEmbed = () => {
   }, []);
 
   useEffect(() => {
-    if (!isDelayed) {
+    if (!isDelayed && windowWidth > 768) {
       const iframe = document.getElementById("sketchfab-iframe");
       const uid = "7bb6e720499a467b8e0427451d180063";
 
@@ -52,11 +65,11 @@ const SecondEmbed = () => {
         camera: 2,
       });
     }
-  }, [isDelayed]);
+  }, [isDelayed, windowWidth]);
 
   return (
     <div>
-      {!isDelayed && (
+      {!isDelayed && windowWidth > 768 && (
         <div
           id="sketchfab-container"
           className="sketchfab-embed-wrapper"

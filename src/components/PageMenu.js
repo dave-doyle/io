@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import MobileMenu from "./MobileMenu"; // Import your MobileMenu component
 
 import "../PageMenu.css"; // Import your CSS file
 
@@ -59,14 +60,42 @@ const PageMenu = () => {
     };
   }, []);
 
+//////////////////////////////////////////////////////////////////
+///////////                                        ///////////////
+///////////      Setting the mobile menu           ///////////////
+//////////                                        ////////////////
+//////////////////////////////////////////////////////////////////
+
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768); // Set breakpoint as needed
+    };
+
+    handleResize(); // Set initial view based on screen width
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Heading>
+
+      {isMobileView ? 
+      (<MobileMenu/>
+
+      ) : (
+        <>
       <motion.div
         className={`Menu-list ${isMenuVisible ? "visible" : ""}`}
         initial={{ opacity: 0 }} // Initial opacity is 0
         animate={{ opacity: isMenuVisible ? 1 : 0 }} // Animate to 1 when visible
         transition={{ duration: 0.5 }} // Adjust the duration as needed
-        style
+        
       >
         <ul data-offset="10">
           <li className="Menu-list-item">
@@ -120,7 +149,7 @@ const PageMenu = () => {
           </li>
         </ul>
       </motion.div>
-      {/* black background */}
+      
       <motion.div
         initial={{ height: 0, top: 0 }} // Set initial height to 0
         animate={{ height: "113%" }} // Animate height to cover the screen
@@ -134,7 +163,10 @@ const PageMenu = () => {
           zIndex: 1,
         }}
       ></motion.div>
+      </>
+      )}
     </Heading>
+      
   );
 };
 
