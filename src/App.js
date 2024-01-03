@@ -6,7 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import PageMenu from './components/PageMenu';
 
-import { ChakraProvider, useMediaQuery } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import CellsBackground from './components/CellsBackground';
 import SecondEmbed from './components/SecondEmbed';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -16,12 +16,13 @@ import MobileAbout_Me from './components/MobileAbout_Me';
 import MobileProjects from './components/MobileProjects';
 import MobileContact from './components/MobileContact';
 
+import { isMobile } from 'react-device-detect';
+
 
 
 
 
 function App() {
-  const [isMobile] = useMediaQuery("(max-width: 768px)");
 
   return (
     <ChakraProvider>
@@ -29,7 +30,9 @@ function App() {
       <div className="App">
         <CellsBackground />
         <PageMenu />
-        <SecondEmbed />
+        {isMobile?(
+        <></>
+        ) : (<><SecondEmbed /></>)}
         
 
         <Routes>
