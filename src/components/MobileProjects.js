@@ -33,17 +33,17 @@ import {
       // Add more projects similarly
     ];
   
-    const initialDelay1 = 70;
-    const initialDelay2 = 2;
+    const initialDelay1 = 30;
+    const initialDelay2 = 1;
   
-    const revealDuration1 = 200;
-    const revealDuration2 = 20;
+    const revealDuration1 = 1;
+    const revealDuration2 = 10;
   
     return (
       <div style={{ position: "relative", minHeight: "100vh" }}>
         {" "}
         {/* Parent container */}
-        <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"400px"}>
+        <SimpleGrid columns={[1, null, 1]} spacing={4} margin="auto" maxWidth="90%">
           <AnimatePresence>
             {projects.map((project, index) => (
               <motion.div
@@ -51,13 +51,13 @@ import {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 2.5, delay: 1.5}}
+                transition={{ duration: 1.5}}
               >
                 <Card
                   backgroundColor={"black"}
                   borderRadius="lg"
                   p="4"
-                  maxWidth="350px"
+                  maxWidth="100%"
                   height="100%"
                 >
                   <CardHeader>
@@ -90,7 +90,7 @@ import {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      transition={{ duration: 0.5, delay: 4.8 }}
+                      transition={{ duration: 1.5, delay: 2}}
                     >
                       <Link to={project.githubLink}>
                         <Button>View here</Button>
@@ -102,7 +102,7 @@ import {
             ))}
           </AnimatePresence>
         </SimpleGrid>
-        {/* black background right to left*/}
+        {/* black background right to left
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: "99.99%" }}
@@ -117,8 +117,8 @@ import {
             zIndex: -1,
             borderRadius: "3px",
           }}
-        ></motion.div>
-        {/* Black background motion div bottom up */}
+        ></motion.div> */}
+        {/* Black background motion div bottom up
         <motion.div
           initial={{ height: 0, width: "100%", bottom: 0 }}
           animate={{
@@ -134,7 +134,7 @@ import {
             zIndex: -1,
             borderRadius: "3px",
           }}
-        />
+        /> */}
       </div>
     );
   }
