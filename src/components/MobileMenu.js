@@ -42,15 +42,16 @@ const MobileMenu = () => {
   
 
   return (
-    <Menu>
+    <Menu style={{zIndex: 10}}>
       <MenuButton
         as={IconButton}
         aria-label="Options"
         icon={<HamburgerIcon />}
         variant="outline"
         onClick={toggleMenu}
+        
       />
-      <MenuList display={isOpen ? "block" : "none"} ref={menuRef}>
+      <MenuList display={isOpen ? "block" : "none"} ref={menuRef} style={{zIndex: 10}}>
         {/* Mobile-specific menu items */}
         {isMenuVisible && (
   <motion.div
@@ -58,6 +59,7 @@ const MobileMenu = () => {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 0.5 }}
+    style={{zIndex: 10}}
   >
     <ul>
       <li>
