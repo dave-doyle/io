@@ -16,7 +16,7 @@ import MobileAbout_Me from './components/MobileAbout_Me';
 import MobileProjects from './components/MobileProjects';
 import MobileContact from './components/MobileContact';
 
-import { isMobile } from 'react-device-detect';
+import { isMobile, isAndroid, isTablet, isIOS, isBrowser } from 'react-device-detect';
 
 
 
@@ -36,7 +36,7 @@ function App() {
         
 
         <Routes>
-            {isMobile ? (
+            {(isMobile || isTablet) && (isAndroid || isIOS)? (
               <>
                 <Route index element={<MobileAbout />} />
                 <Route path="/about_me" element={<MobileAbout_Me />} />
