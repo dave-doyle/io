@@ -55,8 +55,9 @@ const PageMenu = () => {
       });
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-
+    if ($menu && $item.length > 0) {
+      window.addEventListener("mousemove", handleMouseMove);
+    }
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
