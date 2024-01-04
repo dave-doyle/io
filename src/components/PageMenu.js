@@ -5,6 +5,8 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import MobileMenu from "./MobileMenu"; // Import your MobileMenu component
 
 import "../PageMenu.css"; // Import your CSS file
+import { isMobile, isAndroid, isTablet, isIOS, isBrowser } from 'react-device-detect';
+
 
 const PageMenu = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -62,7 +64,7 @@ const PageMenu = () => {
 
 //////////////////////////////////////////////////////////////////
 ///////////                                        ///////////////
-///////////      Setting the mobile menu           ///////////////
+///////////   Setting the mobile menu on resize    ///////////////
 //////////                                        ////////////////
 //////////////////////////////////////////////////////////////////
 
@@ -81,11 +83,12 @@ const PageMenu = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  
 
   return (
     <Heading>
 
-      {isMobileView ? 
+      {(isMobileView || isMobile || isTablet) && (isAndroid || isIOS) ? 
       (<MobileMenu/>
 
       ) : (

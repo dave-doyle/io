@@ -15,7 +15,7 @@ import {
   function MobileAbout_Me() {
     const phrase_1 = ["About Me"];
     const phrase_2 = [
-      "Hi Im David, a software developer from Dublin Ireland. I have a masters in computer science from UCD and enjoy making full stack applications with React. In my free time I like training jiu jitsu and learning Japanese. UCDでコンピューターサイエンスの修士課程に在籍しています。",
+      "Hi I'm David, a software developer from Dublin Ireland. I have a masters in computer science from UCD and enjoy making full stack applications with React. In my free time I like training jiu jitsu and learning Japanese. UCDでコンピューターサイエンスの修士課程に在籍しています。",
     ];
   
     const initialDelay1 = 50;
