@@ -92,9 +92,9 @@ function Projects() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5, delay: 4.8 }}
                   >
-                    <Link to={project.githubLink}>
-                      <Button>View here</Button>
-                    </Link>
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer">             
+                             <Button>View here</Button>
+                    </a>
                   </motion.div>
                 </CardFooter>
               </Card>

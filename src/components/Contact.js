@@ -51,8 +51,7 @@ function Contact() {
                 </Heading>
               </CardHeader>
               <CardBody>
-                <Link to="https://www.linkedin.com/in/david-doyle-dev/">
-                  <motion.div
+              <a href="https://www.linkedin.com/in/david-doyle-dev/" target="_blank" rel="noopener noreferrer">                  <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -64,7 +63,7 @@ function Contact() {
                       borderRadius="1g"
                     />
                   </motion.div>
-                </Link>
+                </a>
               </CardBody>
             </Card>
           </Box>
@@ -92,8 +91,8 @@ function Contact() {
               </CardHeader>
 
               <CardBody>
-                <Link to="https://github.com/dave-doyle">
-                  <motion.div
+              <a href="https://github.com/dave-doyle" target="_blank" rel="noopener noreferrer">  
+                              <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -105,7 +104,7 @@ function Contact() {
                       borderRadius="1g"
                     />
                   </motion.div>
-                </Link>
+                </a>
               </CardBody>
             </Card>
           </Box>
