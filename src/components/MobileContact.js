@@ -34,7 +34,8 @@ function MobileContact() {
               borderWidth="1px"
               borderRadius="lg"
               p="4"
-              maxWidth="100%"
+              maxWidth="100vw"
+              maxHeight="80vh"
             >
               <CardHeader>
                 <Heading size="md" textColor={"white"}>
@@ -74,7 +75,9 @@ function MobileContact() {
               borderWidth="1px"
               borderRadius="lg"
               p="4"
-              maxWidth="100%"
+              maxWidth="100vw"
+              maxHeight="80vh"
+
             >
               <CardHeader>
                 <Heading size="md" textColor={"white"}>
@@ -110,6 +113,23 @@ function MobileContact() {
           </Box>
         </SimpleGrid>
       </motion.div>
+
+      {/* black background top*/}
+      <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: "100vw" }}
+          transition={{ duration: 1.2 }} // Adjust the duration as needed
+          style={{
+            height: "132vh",
+            
+            background: "black",
+            position: "absolute",
+            top: "-1%",
+            left: "0%",
+            zIndex: -1,
+            borderRadius: "3px",
+          }}
+        ></motion.div>
     </AnimatePresence>
     
   );

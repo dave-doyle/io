@@ -1,168 +1,137 @@
-import React, { useState, useEffect } from "react";
-import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import React from "react";
+import {
+  Box,
+  SimpleGrid,
+  Card,
+  CardBody,
+  Image,
+  CardHeader,
+  Heading,
+} from "@chakra-ui/react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import Scrambler from "./Scrambler.js";
-import { motion} from "framer-motion";
 
 function MobileAbout() {
-  const phrase_1 = ["David Doyle"];
-  const phrase_2 = ["Software Developer"]; // Array of phrases
-  const phrase_3 = ["From Dublin Ireland"];
+  const phrase_1 = ['David Doyle'];
+  const phrase_2 = ["Software Developer From Ireland"];
 
-  const initialDelay = 500;
-  const revealDuration = 80;
+  const initialDelay1 = 700;
 
-  const initialDelay2 = 1200;
-  const revealDuration2 = 80;
-
-  const [isGrayLine1Visible, setIsGrayLine1Visible] = useState(false);
-  const [isGrayLine2Visible, setIsGrayLine2Visible] = useState(false);
-
-  useEffect(() => {
-    // Delay the appearance of the gray lines
-    const timeout = setTimeout(() => {
-      // Set state to trigger the animation
-      setIsGrayLine1Visible(true);
-      setIsGrayLine2Visible(true);
-    }, 2800); // Adjust the delay time in milliseconds
-
-    return () => clearTimeout(timeout); // Cleanup function
-  }, []);
-
+  const revealDuration1 = 50;
   return (
-    <SimpleGrid columns={[1, null, 1]} spacing={4} margin="auto" maxWidth="90%">
-    <Box
-      id="about"
-      color="white"
-      marginTop={"10vh"}
-    >
-      <Heading
-        fontWeight={"extrabold"}
-        as="h2"
-        fontSize="2xl"
-        mb="4"
-        paddingLeft={"5vw"}
-        paddingBottom={"2vh"}
-        color={"#a2a1a1"}
-      >
-        
-
-        
-
-       
-
-        {/* black background top*/}
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "65vw" }}
-          transition={{ duration: 1.2, delay: 3 }} // Adjust the duration as needed
-          style={{
-            height: "30vh",
-            
-            background: "black",
-            position: "absolute",
-            top: "25vw",
-            left: "35vw",
-            zIndex: -1,
-            borderRadius: "3px",
-          }}
-        >
-
-        
-        
-        </motion.div>
-        {/* grey line top*/}
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "45vw" }}
-          transition={{ duration: 2.0, delay: 3 }} // Adjust the duration as needed
-          style={{
-            height: "1px",
-            background: "black",
-            position: "absolute",
-            top: "35vw",
-            left: "55vw",
-            
-            
-          }}
-        >
-            <Scrambler
-          phrases={phrase_1}
-          initialDelay={initialDelay}
-          revealDuration={revealDuration}
-          fontSize="6em"
-          fontFamily="Roboto Mono"
-          fontWeight={700}
-          
-          
-        />
-        </motion.div>
-      </Heading>
-
-      
-
+    <AnimatePresence>
       <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 3.5, delay: 0.6}}
+      >
+        <SimpleGrid columns={[1, null, 1]} spacing={4} margin="auto" maxWidth="90%">
+          <Box>
+            <Card
+              backgroundColor={"black"}
+              borderWidth="1px"
+              borderRadius="lg"
+              p="4"
+              maxWidth="100vw"
+              maxHeight="80vh"
+            >
+              <CardHeader>
+                <Heading size="md" textColor={"white"}>
+                  {" "}
+                  <Scrambler
+                    phrases={phrase_1}
+                    initialDelay={initialDelay1}
+                    revealDuration={revealDuration1}
+                    fontSize="md"
+                    fontFamily="Roboto Mono"
+                    fontWeight={700}
+                  />{" "}
+                </Heading>
+              </CardHeader>
+              <CardBody>
+                {/* <Link to="https://www.linkedin.com/in/david-doyle-dev/">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 1.9 }}
+                  >
+                    <Image
+                      src={"/linkedin.png"}
+                      alt={"LinkedIn"}
+                      borderRadius="1g"
+                    />
+                  </motion.div>
+                </Link> */}
+              </CardBody>
+            </Card>
+          </Box>
+
+          <Box>
+            <Card
+              backgroundColor={"black"}
+              borderWidth="1px"
+              borderRadius="lg"
+              p="4"
+              maxWidth="100vw"
+              maxHeight="80vh"
+
+            >
+              <CardHeader>
+                <Heading size="md" textColor={"white"}>
+                  {" "}
+                  <Scrambler
+                    phrases={phrase_2}
+                    initialDelay={initialDelay1}
+                    revealDuration={revealDuration1}
+                    fontSize="md"
+                    fontFamily="Roboto Mono"
+                    fontWeight={700}
+                  />
+                </Heading>
+              </CardHeader>
+
+              <CardBody>
+                {/* <Link to="https://github.com/dave-doyle">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, delay: 1.9 }}
+                  >
+                    <Image
+                      src={"/githublogo.png"}
+                      alt={"Github"}
+                      borderRadius="1g"
+                    />
+                  </motion.div>
+                </Link> */}
+              </CardBody>
+            </Card>
+          </Box>
+        </SimpleGrid>
+      </motion.div>
+
+      {/* black background top*/}
+      {/* <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "90vw" }}
-          transition={{ duration: 1.0 }} // Adjust the duration as needed
+          animate={{ width: "100vw" }}
+          transition={{ duration: 1.2 }} // Adjust the duration as needed
           style={{
-            height: "20vh",
+            height: "60vh",
+            
             background: "black",
             position: "absolute",
-            top: "50vw",
-            left: "10vw",
+            top: "-1%",
+            left: "0%",
             zIndex: -1,
             borderRadius: "3px",
           }}
-        >
-
-        {/* <div className="container" style={{ display: "flex" }}> */}
-        {/* <Text
-            borderRadius={"3px"}
-            paddingRight={"4vw"}
-            paddingLeft={"50v"}
-            bg={"black"}
-            fontSize="2xl"
-            fontWeight={900}
-            fontFamily="Font2, roboto mono"
-            marginLeft={-9}
-          > */}
-            <Scrambler
-              phrases={phrase_2}
-              initialDelay={initialDelay2}
-              revealDuration={revealDuration2}
-              fontSize="2xl"
-              fontFamily="roboto mono"
-            />
-          {/* </Text> */}
-          
-        {/* </div> */}
-        {/* <div className="container" style={{ display: "flex" }}> */}
-          {/* <Text
-            borderRadius={"3px"}
-            paddingRight={"4vw"}
-            paddingLeft={"50v"}
-            bg={"black"}
-            fontSize="2xl"
-            fontWeight={900}
-            fontFamily="Font2, roboto mono"
-            marginLeft={-9}
-          > */}
-            <Scrambler
-              phrases={phrase_3}
-              initialDelay={initialDelay2}
-              revealDuration={revealDuration2}
-              fontSize="10em"
-              fontFamily="roboto mono"
-            />
-          {/* </Text> */}
-          </motion.div>
-          
-        {/* </div> */}
-      
-
-      
-    </Box>
-    </SimpleGrid>
+        ></motion.div> */}
+    </AnimatePresence>
+    
   );
 }
 
