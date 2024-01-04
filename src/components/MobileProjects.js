@@ -92,9 +92,9 @@ import {
                       exit={{ opacity: 0 }}
                       transition={{ duration: 1.5, delay: 2}}
                     >
-                      <Link to={project.githubLink}>
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer">             
                         <Button>View here</Button>
-                      </Link>
+                      </a>
                     </motion.div>
                   </CardFooter>
                 </Card>
