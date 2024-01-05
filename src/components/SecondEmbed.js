@@ -6,17 +6,7 @@ const SecondEmbed = () => {
   const [isDelayed, setIsDelayed] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setWindowWidth(window.innerWidth);
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
+  
 
   useEffect(() => {
     // Simulate a delay before showing the component
@@ -40,21 +30,7 @@ const SecondEmbed = () => {
           api.addEventListener("viewerready", function () {
             console.log("Viewer is ready");
 
-            // const cameraPosition = [5, -190, 100];
-            // const cameraTarget = [0, 30, 1];
-            // const duration = 0.5;
-
-            // api.setCameraLookAt(
-            //   cameraPosition,
-            //   cameraTarget,
-            //   duration,
-            //   function (err) {
-            //     if (!err) {
-            //       console.log("Camera view set");
-            //     }
-            //   }
-            // );
-
+            
             api.load();
           });
         },

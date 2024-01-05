@@ -24,20 +24,20 @@ function RevealText() {
   return (
     <Box>
       <div
-        style={{ position: "relative", height: "80px", paddingTop: "200px" }}
+        style={{ position: "relative", height: "10vh", paddingTop: "20vh" }}
       >
         <AnimatePresence>
           {isAnimating && (
             <motion.div
-              initial={{ width: 0, left: "60%" }}
-              animate={{ width: "53%", left: "14%" }}
-              exit={{ width: 0, left: "14%", duration: 0.05 }}
+              initial={{ width: 0, left: "60vh" }}
+              animate={{ width: "50vw", left: "11.5vw" }}
+              exit={{ width: 0, left: "11.5vw", duration: 0.05 }}
               transition={{
                 // Use easeInOut for smoother transition
                 duration: 0.9, // Increase the duration
               }}
               style={{
-                height: "85px",
+                height: "12vh",
                 borderRadius: "1px",
                 background: "rgba(30, 243, 207, 0.988)",
                 position: "absolute",
@@ -50,31 +50,35 @@ function RevealText() {
         <motion.div
           initial={{ opacity: 0, zIndex: 2 }} // Set zIndex to 2 to be behind the text
           animate={{
-            opacity: isRectReceding ? 1 : 0, // Show background when rect is receding
+            opacity: isRectReceding ? 1 : 0,
+            width: "fit-content", // Update width to fit the content
+            maxWidth: "60vw", // Set a maximum width for the red box
+            fontSize: "clamp(1.5vw, 3.5vw, 5vw)", // Dynamic font size based on viewport size
           }}
           transition={{ ease: "easeInOut", duration: 0.9 }}
           style={{
-            background: "black", // Set the background color
-            padding: "60px 435px", // Adjust padding as needed
+            backgroundColor: "black", // Set the background color
+            padding: "6vh 26vw", // Adjust padding as needed
             borderRadius: "3px", // Adjust border radius as needed
             position: "absolute",
-            width: "fit-content", // Make the width fit the content
-            top: "-7%", // Adjust top position as needed
-            left: "11.7%", // Adjust left position as needed
-            zIndex: 2, // Set zIndex to be behind the text
+             // Make the width fit the content
+            top: "1vh", // Adjust top position as needed
+            left: "10vw", // Adjust left position as needed
+            zIndex: 2,
           }}
         ></motion.div>
         <motion.div
           initial={{ opacity: 0, zIndex: 3 }}
           animate={{
-            opacity: isRectReceding ? 1 : 0, // Show text when rect is receding
+            opacity: isRectReceding ? 1 : 0,
+            fontSize: "clamp(1.5vw, 3.5vw, 5vw)", // Dynamic font size based on viewport size // Show text when rect is receding
           }}
           transition={{ ease: "easeInOut", duration: 0.9 }} // Use easeInOut
           style={{
             color: "rgba(255, 255, 255, 0.988)",
-            marginTop: "20px",
+            marginTop: "2vh",
             textAlign: "center",
-            fontSize: "3.8em",
+            fontSize: "3.8vw",
             whiteSpace: "pre-line",
             position: "absolute",
             width: "100%",
@@ -94,8 +98,8 @@ function RevealText() {
           transition={{ ease: "easeInOut", duration: 0.9 }} // Use easeInOut
           style={{
             position: "absolute",
-            top: "10%", // Adjust top position as needed
-            left: "66%", // Adjust left position as needed
+            top: "1vh", // Adjust top position as needed
+            left: "59vw", // Adjust left position as needed
             zIndex: isRectReceding ? 0 : 5, // Show behind rectangle when rect is receding
             fontFamily: "Roboto Mono",
           }}
@@ -104,21 +108,21 @@ function RevealText() {
           <TypeAnimation
             sequence={["", 1, ""]}
             speed={20}
-            style={{ whiteSpace: "pre-line", fontSize: "3.1em" }}
+            style={{ whiteSpace: "pre-line", fontSize: "3.5vw" }}
             repeat={0}
           />
         </motion.div>
         {/* Grey line */}
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "53.5%" }}
-          transition={{ duration: 1.5 }} // Adjust the duration as needed
+          animate={{ width: "45vw" }}
+          transition={{ duration: 1.5, delay:2.88 }} // Adjust the duration as needed
           style={{
             height: "1px",
             background: "grey",
             position: "absolute",
-            top: "48.5%",
-            left: "13.5%",
+            top: "60%",
+            left: "16%",
             zIndex: 3,
           }}
         ></motion.div>
