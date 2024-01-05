@@ -34,14 +34,14 @@ function About_Me() {
           exit={{ opacity: 0 }}
           transition={{ duration: 3.5, delay: 1.0 }}
         >
-          <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"400px"}>
+          <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"19%"}>
             <Box>
               <Card
                 borderRadius="lg"
                 borderWidth="1px"
                 p="4"
-                maxWidth="350px"
-                maxHeight={"5000px"}
+                maxWidth="70%"
+                maxHeight={"96%"}
                 backgroundColor={"black"}
               >
                 <CardHeader>
