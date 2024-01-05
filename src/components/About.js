@@ -29,65 +29,50 @@ function About() {
     <Box
       id="about"
       color="white"
-      marginBottom={"100px"}
-      marginTop={"150px"}
-      marginLeft={"101px"}
+      marginBottom={"10%"}
+      marginTop={"9%"}
+      marginLeft={"8%"}
     >
       <Heading
         fontWeight={"extrabold"}
         as="h2"
-        fontSize="5xl"
+        fontSize={{ base: "2xl", md: "5xl" }} // Responsive font size
         mb="4"
-        paddingLeft={"198px"}
-        paddingBottom={"19px"}
+        paddingLeft={"13vw"}
+        paddingBottom={"10vh"}
         color={"#a2a1a1"}
       >
-        <Scrambler
+        <div style={{ position: "relative", display: "inline-block" }}>
+           <Scrambler
           phrases={phrase_1}
           initialDelay={initialDelay}
           revealDuration={revealDuration}
-          fontSize="6em"
           fontFamily="Roboto Mono"
           fontWeight={700}
         />
         {/* Grey line */}
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "21.5%" }}
+          animate={{ width: "100%" }}
           transition={{ duration: 2.0 }} // Adjust the duration as needed
           style={{
             height: "1px",
             background: "grey",
             position: "absolute",
-            top: "32.4%",
-            left: "19.8%",
+            bottom: "-5px",
+            left: 0,
             zIndex: 3,
           }}
-        ></motion.div>
-
-        {/* black background */}
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "81.9%" }}
-          transition={{ duration: 1.0 }} // Adjust the duration as needed
-          style={{
-            height: "210px",
-            background: "black",
-            position: "absolute",
-            top: "22.8%",
-            left: "18.1%",
-            zIndex: -1,
-            borderRadius: "3px",
-          }}
-        ></motion.div>
+        ></motion.div></div>
+       
 
         {/* black background top*/}
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "99.99%" }}
-          transition={{ duration: 2.2 }} // Adjust the duration as needed
+          animate={{ minWidth: "100%" }}
+          transition={{ duration: 0.8 }} // Adjust the duration as needed
           style={{
-            height: "260px",
+            height: "75%",
             
             background: "black",
             position: "absolute",
@@ -108,8 +93,7 @@ function About() {
             paddingRight={"40px"}
             paddingLeft={"50px"}
             bg={"black"}
-            fontSize="6xl"
-            fontWeight={900}
+            fontSize={{ base: "2xl", md: "5xl" }}             fontWeight={900}
             fontFamily="Font2, roboto mono"
             marginLeft={-9}
           >
@@ -117,7 +101,6 @@ function About() {
               phrases={phrase_2}
               initialDelay={initialDelay}
               revealDuration={revealDuration}
-              fontSize="8em"
               fontFamily="roboto mono"
             />
           </Text>

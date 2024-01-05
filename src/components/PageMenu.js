@@ -164,7 +164,7 @@ const PageMenu = () => {
         transition={{ duration: 1.2 }} // Adjust the duration as needed
         style={{
           width: '20vw', // Set width to cover the screen horizontally
-          background: "blue",
+          background: "black",
           position: "absolute",
           top: 0,
           left: 0,
