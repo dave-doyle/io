@@ -1,6 +1,6 @@
 /* PageMenu.css */
 .Menu-list {
-  font-size: 3.25rem;
+  font-size: 3.25vw;
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
@@ -8,8 +8,8 @@
   flex-direction: column;
   align-items: center;
   transform: rotateX(-10deg) rotateY(20deg); /* overwritten by JS */
-  padding-top: 40px;
-  padding-left: 5px;
+  padding-top: 5vh;
+  padding-left: 1vw;
   position:fixed;
   z-index: 2;
   font-weight: 700;
@@ -31,15 +31,15 @@
   content: "";
   display: block;
   position: absolute;
-  top: 49%;
-  left: -10%;
-  right: -10%;
-  height: 5px;
-  border-radius: 4px;
-  margin-top: -2px;
+  top: 4vh;
+  left: -1vw;
+  right: -0.1vw;
+  height: 0.5vh;
+  border-radius: 4vw;
+  /* margin-top: -2vh; */
   background: #2cedff;
   transform: scale(0);
-  transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  transition: transform 0.5s cubic-bezier(0.16, 1.08, 0.38, 0.98);
   z-index: 3;
 }
 
@@ -49,8 +49,8 @@
   overflow: hidden;
   color: #b0b0b0;
   top: 0;
-  height: 49%;
-  transition: all 2.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  height: 6vw;
+  transition: all 1.8s cubic-bezier(0.16, 1.08, 0.38, 1.2);
 }
 
 .Mask span {
@@ -58,11 +58,9 @@
 }
 
 .Mask + .Mask {
-  top: -0.1%;
-  height: 100.1%;
-  /* span {
-    transform: translateY(-15%);
-  } */
+  top: -0.05vw;
+  height: 5vh;
+
 }
 
 .Menu-list-item:hover,

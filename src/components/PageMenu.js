@@ -99,7 +99,10 @@ const PageMenu = () => {
         initial={{ opacity: 0 }} // Initial opacity is 0
         animate={{ opacity: isMenuVisible ? 1 : 0 }} // Animate to 1 when visible
         transition={{ duration: 0.5 }} // Adjust the duration as needed
-        
+        style={{
+          overflow: 'hidden',
+          zIndex:4 // Prevents content from overflowing
+        }}
       >
         <ul data-offset="10">
           <li className="Menu-list-item">
@@ -119,10 +122,10 @@ const PageMenu = () => {
           <Link to="/about_me" style={{ zIndex: 10 }}>About Me
             <span className="Mask">
             
-              <span>About Me</span>
+              <span>About</span>
             </span>
             <span className="Mask">
-              <span>About Me</span>
+              <span>About</span>
             </span>
             </Link>
           </li>
@@ -154,17 +157,17 @@ const PageMenu = () => {
         </ul>
       </motion.div>
       
+      {/* First Top to bottom back block */}
       <motion.div
         initial={{ height: 0, top: 0 }} // Set initial height to 0
-        animate={{ height: "113%" }} // Animate height to cover the screen
-        transition={{ duration: 3.2 }} // Adjust the duration as needed
+        animate={{ height: "100vh" }} // Animate height to cover the screen
+        transition={{ duration: 1.2 }} // Adjust the duration as needed
         style={{
-          width: '279px', // Set width to cover the screen horizontally
-          background: "black",
+          width: '20vw', // Set width to cover the screen horizontally
+          background: "blue",
           position: "absolute",
           top: 0,
-          left: "0%",
-          zIndex: 1,
+          left: 0,
         }}
       ></motion.div>
       </>

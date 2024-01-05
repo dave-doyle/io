@@ -6,17 +6,17 @@ const SecondEmbed = () => {
   const [isDelayed, setIsDelayed] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setWindowWidth(window.innerWidth);
+  //   };
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   useEffect(() => {
     // Simulate a delay before showing the component
@@ -73,7 +73,7 @@ const SecondEmbed = () => {
         <div
           id="sketchfab-container"
           className="sketchfab-embed-wrapper"
-          style={{ position: "fixed", width: "18%", height: "100%",zIndex:'1' }}
+          style={{ position: "fixed", width: "18vw", height: "100%",zIndex:'3' }}
         >
           <iframe
             id="sketchfab-iframe"
@@ -99,26 +99,26 @@ const SecondEmbed = () => {
               bottom: "0",
               left: "0",
               width: "100%",
-              height: "220px",
+              height: "24vh",
               background: "black",
             }}
           />
         </div>
       )}
-      {/* black background */}
+      {/* black background
       <motion.div
         initial={{ height: 0, top: "100%" }} // Set initial top position to 100%
         animate={{ height: "100%", top: 0 }} // Animate top position to 0%
         transition={{ duration: 3.2 }} // Adjust the duration as needed
         style={{
           width: "19%", // Set width to cover the screen horizontally
-          background: "black",
+          background: "red",
           position: "absolute",
           top: 0,
           left: "0%",
           zIndex: -3,
         }}
-      ></motion.div>
+      ></motion.div> */}
     </div>
   );
 };
