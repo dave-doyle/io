@@ -3,91 +3,94 @@ import React, { useState, useEffect, useRef } from "react";
 import { Menu, MenuButton, MenuList, IconButton } from "@chakra-ui/react";
 import { HamburgerIcon} from '@chakra-ui/icons'
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import "../MobileMenu.css";
+import { Link, useLocation } from "react-router-dom";import "../MobileMenu.css";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
   const menuRef = useRef();
 
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (menuRef.current && !menuRef.current.contains(event.target)) {
+  //       setIsOpen(false);
+  //     }
+  //   };
+
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
+
   useEffect(() => {
-    const visibilityTimeout = setTimeout(() => {
-      setIsMenuVisible(true);
-    }, 3000); // Set the delay time in milliseconds
+    console.log(isOpen, 'current isOpen state');
+  }, [isOpen]);
 
-    return () => clearTimeout(visibilityTimeout);
-  }, []);
-
-  // when you click outside the mobile menu + close it and then try to reopen, this allows that
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  // Handle toggling menu visibility
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
- 
-  
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
-    <Menu style={{zIndex: 10}}>
-      <MenuButton
-        as={IconButton}
+    <div style={{ zIndex: 10 }}>
+      <button
         aria-label="Options"
-        icon={<HamburgerIcon />}
         variant="outline"
         onClick={toggleMenu}
-        
-      />
-      <MenuList display={isOpen ? "block" : "none"} ref={menuRef} style={{zIndex: 10}}>
+        style={{
+          width: '15vw',
+          height: '5vh',
+          top: '0vh',
+          right: '0vw',
+          color: 'white',
+          zIndex: 10,
+          backgroundColor: 'transparent',
+          border: 'none',
+          cursor: 'pointer',
+        }}
+      >
+        <HamburgerIcon />
+      </button>
+      <div
+        className="menu"
+        style={{
+          display: isOpen ? "block" : "none",
+          zIndex: 10,
+          backgroundColor: 'red',
+          position: 'absolute',
+          top: '5vh', // Adjust positioning as needed
+          right: '0',
+        }}
+        ref={menuRef}
+      >
         {/* Mobile-specific menu items */}
-        {isMenuVisible && (
-  <motion.div
-    className={`MenuList ${isMenuVisible ? "visible" : ""}`}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.5 }}
-    style={{zIndex: 10}}
-  >
-    <ul>
-      <li>
-        <Link to="/" className="menu-link" >
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link to="/about_me" className="menu-link" >
-          About Me
-        </Link>
-      </li>
-      <li>
-        <Link to="/projects" className="menu-link" >
-          Projects
-        </Link>
-      </li>
-      <li>
-        <Link to="/contact" className="menu-link" >
-          Contact
-        </Link>
-      </li>
-    </ul>
-  </motion.div>
-)}
-
-      </MenuList>
-    </Menu>
+        <ul>
+          <li>
+            <Link to="/" className="menu-link" onClick={closeMenu}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about_me" className="menu-link" onClick={closeMenu}>
+              About Me
+            </Link>
+          </li>
+          <li>
+            <Link to="/projects" className="menu-link" onClick={closeMenu}>
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="menu-link" onClick={closeMenu}>
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 };
 
