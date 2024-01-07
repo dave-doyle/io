@@ -27,15 +27,15 @@ function Contact() {
         exit={{ opacity: 0 }}
         transition={{ duration: 3.5, delay: 0.6}}
       >
-        <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"400px"}>
+        <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"30vw"}>
           <Box>
             <Card
               backgroundColor={"black"}
               borderWidth="1px"
               borderRadius="lg"
               p="4"
-              maxWidth="380px"
-              marginRight="20px"
+              maxWidth={["90vw", null, "120vw"]} // Adjusted to responsive width
+              marginRight={["0", null, "10vw"]}
             >
               <CardHeader>
                 <Heading size="md" textColor={"white"}>
@@ -74,7 +74,8 @@ function Contact() {
               borderWidth="1px"
               borderRadius="lg"
               p="4"
-              maxWidth="380px"
+              maxWidth={["90vw", null, "120vw"]}
+              marginRight={["0", null, "10vw"]}
             >
               <CardHeader>
                 <Heading size="md" textColor={"white"}>
@@ -87,6 +88,7 @@ function Contact() {
                     fontFamily="Roboto Mono"
                     fontWeight={700}
                   />
+                  {" "}
                 </Heading>
               </CardHeader>
 
@@ -118,7 +120,9 @@ function Contact() {
           animate={{ width: "100vw" }}
           transition={{ duration: 1.2 }} // Adjust the duration as needed
           style={{
-            height: "470px",
+            
+            height: window.innerHeight * 0.8, // Set initial height based on 80% of viewport height
+            width: window.innerWidth,
             
             background: "black",
             position: "absolute",

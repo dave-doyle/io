@@ -43,7 +43,7 @@ function Projects() {
     <div style={{ position: "relative", minHeight: "100vh" }}>
       {" "}
       {/* Parent container */}
-      <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"400px"}>
+      <SimpleGrid columns={[2, null, 2]} spacing={4} marginLeft={"21%"}>
         <AnimatePresence>
           {projects.map((project, index) => (
             <motion.div
@@ -101,14 +101,14 @@ function Projects() {
             </motion.div>
           ))}
         </AnimatePresence>
-      </SimpleGrid>
-      {/* black background right to left*/}
+
+         {/* black background right to left*/}
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: "99.99%" }}
         transition={{ duration: 1.6 }} // Adjust the duration as needed
         style={{
-          height: "548px",
+          height: "80vh",
 
           background: "black",
           position: "absolute",
@@ -118,6 +118,8 @@ function Projects() {
           borderRadius: "3px",
         }}
       ></motion.div>
+      </SimpleGrid>
+     
       {/* Black background motion div bottom up */}
       <motion.div
         initial={{ height: 0, width: "100%", bottom: 0 }}
