@@ -54,7 +54,7 @@ function About() {
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
-          transition={{ duration: 2.0 }} // Adjust the duration as needed
+          transition={{ duration: 1.5, delay: 1.8 }} // Adjust the duration as needed
           style={{
             height: "1px",
             background: "grey",
