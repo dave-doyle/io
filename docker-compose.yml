@@ -1,0 +1,6 @@
+version: '3'
+services:
+  react-app:
+    image: davedoyle/personal_site:latest
+    ports:
+      - "3000:80"  # Map React app container's port 80 to localhost:3000
