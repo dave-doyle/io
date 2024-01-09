@@ -83,7 +83,7 @@ function RevealText() {
             position: "absolute",
             width: "100%",
             top: "-5%",
-            left: "-9.7%",
+            left: "-13%",
             zIndex: isRectReceding ? 0 : 3, // Show behind rectangle when rect is receding
             fontFamily: "Roboto Mono",
           }}
@@ -99,7 +99,7 @@ function RevealText() {
           style={{
             position: "absolute",
             top: "1vh", // Adjust top position as needed
-            left: "59vw", // Adjust left position as needed
+            left: "55vw", // Adjust left position as needed
             zIndex: isRectReceding ? 0 : 5, // Show behind rectangle when rect is receding
             fontFamily: "Roboto Mono",
           }}
@@ -115,14 +115,14 @@ function RevealText() {
         {/* Grey line */}
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: "45vw" }}
+          animate={{ width: "40.5vw" }}
           transition={{ duration: 1.5, delay:2.88 }} // Adjust the duration as needed
           style={{
             height: "1px",
             background: "grey",
             position: "absolute",
             top: "60%",
-            left: "16%",
+            left: "15%",
             zIndex: 3,
           }}
         ></motion.div>
