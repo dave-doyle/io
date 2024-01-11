@@ -16,7 +16,7 @@ import MobileAbout_Me from './components/MobileAbout_Me';
 import MobileProjects from './components/MobileProjects';
 import MobileContact from './components/MobileContact';
 
-import { isMobile, isAndroid, isTablet, isIOS, isBrowser } from 'react-device-detect';
+import { isMobile, isAndroid, isTablet, isIOS } from 'react-device-detect';
 
 
 
