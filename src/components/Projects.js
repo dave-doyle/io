@@ -32,11 +32,10 @@ function Projects() {
     // Add more projects similarly
   ];
 
-  const initialDelay1 = 70;
+  const initialDelay1 = 20;
   const initialDelay2 = 20;
-
-  const revealDuration1 = 350;
-  const revealDuration2 = 30;
+  const revealDuration1 = 10;
+  const revealDuration2 = 10;
 
   return (
     <div style={{ position: "relative", minHeight: "100vh" }}>
@@ -50,7 +49,7 @@ function Projects() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 2.5, delay: 1.5}}
+              transition={{ duration: 2.5, delay: 0}}
             >
               <Card
                 backgroundColor={"black"}
@@ -89,7 +88,7 @@ function Projects() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5, delay: 3.2 }}
+                    transition={{ duration: 0.5, delay: 1.2 }}
                   >
                     <a href={project.githubLink} target="_blank" rel="noopener noreferrer">             
                              <Button>View here</Button>
@@ -102,7 +101,7 @@ function Projects() {
         </AnimatePresence>
 
          {/* black background right to left*/}
-      <motion.div
+      {/* <motion.div
         initial={{ width: 0 }}
         animate={{ width: "99.99%" }}
         transition={{ duration: 1.6 }} // Adjust the duration as needed
@@ -116,7 +115,7 @@ function Projects() {
           zIndex: -1,
           borderRadius: "3px",
         }}
-      ></motion.div>
+      ></motion.div> */}
       </SimpleGrid>
      
      

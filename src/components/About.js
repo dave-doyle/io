@@ -7,8 +7,6 @@ import RevealText from "./RevealText.js";
 
 function About() {
   const phrase_1 = ["DAVID DOYLE"];
-  const phrase_2 = ["Software Developer"]; // Array of phrases
-  const phrase_3 = ["Thanks for visiting from "]; // Array of phrases
 
   const initialDelay = 30;
   const revealDuration = 100;

@@ -48,12 +48,12 @@ const SecondEmbed = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 3.5 }}
+          transition={{ duration: 2, delay: 0 }}
         >
           <Box
             borderRadius={"3px"}
             paddingRight={"1%"}
-            paddingLeft={"2%"}
+            paddingLeft={"5%"}
             bg={"black"}
             fontSize={{ base: "2xl", md: "2xl" }}
             fontWeight={900}

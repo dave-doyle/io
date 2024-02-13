@@ -14,7 +14,7 @@ const PageMenu = () => {
   useEffect(() => {
     const visibilityTimeout = setTimeout(() => {
       setIsMenuVisible(true);
-    }, 3000); // Set the delay time in milliseconds
+    }, 30); // Set the delay time in milliseconds
 
     return () => clearTimeout(visibilityTimeout);
   }, []);
@@ -99,7 +99,7 @@ const PageMenu = () => {
         className={`Menu-list ${isMenuVisible ? "visible" : ""}`}
         initial={{ opacity: 0 }} // Initial opacity is 0
         animate={{ opacity: isMenuVisible ? 1 : 0 }} // Animate to 1 when visible
-        transition={{ duration: 0.5 }} // Adjust the duration as needed
+        transition={{ duration: 0.1 }} // Adjust the duration as needed
         style={{
           overflow: 'hidden',
           zIndex:4 // Prevents content from overflowing
