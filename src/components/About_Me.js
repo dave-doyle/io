@@ -5,8 +5,7 @@ import {
   Card,
   CardBody,
   SimpleGrid,
-  CardHeader,
-  Text,
+  CardHeader
 } from "@chakra-ui/react";
 import React from "react";
 import Scrambler from "./Scrambler.js";

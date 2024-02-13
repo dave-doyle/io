@@ -95,6 +95,7 @@ const PageMenu = () => {
       ) : (
         <>
       <motion.div
+      key="key1"
         className={`Menu-list ${isMenuVisible ? "visible" : ""}`}
         initial={{ opacity: 0 }} // Initial opacity is 0
         animate={{ opacity: isMenuVisible ? 1 : 0 }} // Animate to 1 when visible
@@ -159,6 +160,7 @@ const PageMenu = () => {
       
       {/* First Top to bottom back block */}
       <motion.div
+      key="key2"
         initial={{ height: 0, top: 0 }} // Set initial height to 0
         animate={{ height: "100vh" }} // Animate height to cover the screen
         transition={{ duration: 1.2 }} // Adjust the duration as needed

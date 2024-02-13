@@ -39,7 +39,8 @@ function RevealText() {
               style={{
                 height: "12vh",
                 borderRadius: "1px",
-                background: "rgba(30, 243, 207, 0.988)",
+                background: "linear-gradient(60deg, #96deda 0%, #50c9c3 100%)", 
+                clipPath: "polygon(100% 0, 100% 75%, 82% 100%, 0 100%, 0 0)",
                 position: "absolute",
                 top: 0,
                 zIndex: 4,
@@ -87,7 +88,7 @@ function RevealText() {
             zIndex: isRectReceding ? 0 : 3, // Show behind rectangle when rect is receding
             fontFamily: "Roboto Mono",
           }}
-        >From Dublin Ireland
+        >Software Developer
         </motion.div>
         {/* Container for the TypeAnimation */}
         <motion.div

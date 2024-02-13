@@ -9,7 +9,6 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
 import Scrambler from "./Scrambler.js";
 
 function MobileAbout() {

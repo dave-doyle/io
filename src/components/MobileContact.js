@@ -9,7 +9,6 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
 import Scrambler from "./Scrambler.js";
 
 function MobileContact() {
@@ -97,6 +96,7 @@ function MobileContact() {
               <CardBody>
               <a href="https://github.com/dave-doyle" target="_blank" rel="noopener noreferrer">  
                   <motion.div
+                  key="uniqueKey1"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -117,6 +117,7 @@ function MobileContact() {
 
       {/* black background top*/}
       <motion.div
+      key="uniqueKey2"
           initial={{ width: 0 }}
           animate={{ width: "100vw" }}
           transition={{ duration: 1.2 }} // Adjust the duration as needed

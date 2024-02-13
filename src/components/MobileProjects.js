@@ -7,10 +7,9 @@ import {
     CardFooter,
     Button,
     CardHeader,
-    Text,
+    Text,Box
   } from "@chakra-ui/react";
   import React from "react";
-  import { Link } from "react-router-dom";
   import { motion, AnimatePresence } from "framer-motion";
   import Scrambler from "./Scrambler.js";
   
@@ -74,7 +73,7 @@ import {
                   </CardHeader>
                   <Image src={project.imageSrc} alt={"text"} />
                   <CardBody>
-                    <Text textColor={"white"}>
+                    <Box textColor={"white"}>
                       <Scrambler
                         phrases={[project.description]}
                         initialDelay={initialDelay2}
@@ -83,7 +82,7 @@ import {
                         fontFamily="Roboto Mono"
                         fontWeight={700}
                       />
-                    </Text>
+                    </Box>
                   </CardBody>
                   <CardFooter>
                     <motion.div

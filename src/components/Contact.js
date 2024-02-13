@@ -9,7 +9,6 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
 import Scrambler from "./Scrambler.js";
 
 function Contact() {
@@ -22,6 +21,7 @@ function Contact() {
   return (
     <AnimatePresence>
       <motion.div
+      key="uniqueKey1"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -51,7 +51,9 @@ function Contact() {
                 </Heading>
               </CardHeader>
               <CardBody>
-              <a href="https://www.linkedin.com/in/david-doyle-dev/" target="_blank" rel="noopener noreferrer">                  <motion.div
+              <a href="https://www.linkedin.com/in/david-doyle-dev/" target="_blank" rel="noopener noreferrer">    
+                            <motion.div
+                            key="uniqueKey2"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -95,6 +97,7 @@ function Contact() {
               <CardBody>
               <a href="https://github.com/dave-doyle" target="_blank" rel="noopener noreferrer">  
                               <motion.div
+                              key="uniqueKey3"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -113,25 +116,6 @@ function Contact() {
         </SimpleGrid>
       </motion.div>
 
-
-      {/* black background top*/}
-      <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "100vw" }}
-          transition={{ duration: 1.2 }} // Adjust the duration as needed
-          style={{
-            
-            height: window.innerHeight * 0.8, // Set initial height based on 80% of viewport height
-            width: window.innerWidth,
-            
-            background: "black",
-            position: "absolute",
-            top: "-1%",
-            left: "0%",
-            zIndex: -1,
-            borderRadius: "3px",
-          }}
-        ></motion.div>
     </AnimatePresence>
     
   );

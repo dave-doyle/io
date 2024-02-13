@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "../CellsBackground.css";
 
-import CELLS from "vanta/src/vanta.cells";
+import CELLS from "vanta/src/vanta.birds.js";
 
 const CellsBackground = () => {
   const vantaRef = useRef(null);
@@ -13,12 +13,14 @@ const CellsBackground = () => {
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      minHeight: 200.0,
-      minWidth: 200.0,
-      scale: 1.0,
-      color1: 0x0,
-      color2: 0x185e5e,
-      size: 0.9,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0x0,
+      color1: 0xa46b6b,
+      color2: 0x30d4d3,
+      colorMode: "lerpGradient"
     });
   }, []);
 

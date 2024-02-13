@@ -9,6 +9,9 @@ import PageMenu from './components/PageMenu';
 import { ChakraProvider } from '@chakra-ui/react';
 import CellsBackground from './components/CellsBackground';
 import SecondEmbed from './components/SecondEmbed';
+
+
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import MobileAbout from './components/MobileAbout'; // Import the MobileAbout component
