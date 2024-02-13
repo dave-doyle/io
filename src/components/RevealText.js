@@ -59,7 +59,7 @@ function RevealText() {
           transition={{ ease: "easeInOut", duration: 0.9 }}
           style={{
             backgroundColor: "black", // Set the background color
-            padding: "6vh 26vw", // Adjust padding as needed
+            padding: "6vh 22.5vw", // Adjust padding as needed
             borderRadius: "3px", // Adjust border radius as needed
             position: "absolute",
              // Make the width fit the content
@@ -100,7 +100,7 @@ function RevealText() {
           style={{
             position: "absolute",
             top: "1vh", // Adjust top position as needed
-            left: "55vw", // Adjust left position as needed
+            left: "53vw", // Adjust left position as needed
             zIndex: isRectReceding ? 0 : 5, // Show behind rectangle when rect is receding
             fontFamily: "Roboto Mono",
           }}
