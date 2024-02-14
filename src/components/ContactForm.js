@@ -45,7 +45,9 @@ export const ContactForm = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
+    <form ref={form} 
+    onSubmit={sendEmail}
+    >
       <Input
        isRequired
         type="text"
@@ -76,6 +78,7 @@ export const ContactForm = () => {
         textColor={"white"}
 
       ></Input>
+      
 
       <Button
         leftIcon={<AiTwotoneMail />}
@@ -83,6 +86,8 @@ export const ContactForm = () => {
         variant="solid"
         type="submit"
         value="Send"
+        marginTop={"3%"}
+
       >
         Email
       </Button>
