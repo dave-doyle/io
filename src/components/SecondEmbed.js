@@ -7,7 +7,7 @@ const SecondEmbed = () => {
   const [isDelayed, setIsDelayed] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  const open_cage_api_key = process.env.OPEN_CAGE_KEY
+  const API_KEY = process.env.REACT_APP_OPEN_CAGE_KEY
 
   //////////////////////////////
   /////Fetching Visitor IP//////
@@ -24,7 +24,7 @@ const SecondEmbed = () => {
           // Make a request to OpenCage Geocoding API
           axios
             .get(
-              `https://api.opencagedata.com/geocode/v1/json?key=open_cage_api_key&q=${latitude}+${longitude}`
+              `https://api.opencagedata.com/geocode/v1/json?key=${API_KEY}&q=${latitude}+${longitude}`
             )
             .then((response) => {
               // Extract city name from the API response
