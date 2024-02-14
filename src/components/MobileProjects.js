@@ -32,8 +32,8 @@ import {
       // Add more projects similarly
     ];
   
-    const initialDelay1 = 30;
-    const initialDelay2 = 1;
+    const initialDelay1 = 1;
+    const initialDelay2 = 30;
   
     const revealDuration1 = 1;
     const revealDuration2 = 10;
@@ -43,14 +43,14 @@ import {
         {" "}
         {/* Parent container */}
         <SimpleGrid columns={[1, null, 1]} spacing={4} margin="auto" maxWidth="90%">
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 1.5}}
+                transition={{ duration: 1.5, delay: index === 0 ? 0 : 2 }}
               >
                 <Card
                   backgroundColor={"black"}
@@ -101,39 +101,7 @@ import {
             ))}
           </AnimatePresence>
         </SimpleGrid>
-        {/* black background right to left
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "99.99%" }}
-          transition={{ duration: 1.6 }} // Adjust the duration as needed
-          style={{
-            height: "548px",
-  
-            background: "black",
-            position: "absolute",
-            top: "-1%",
-            left: "0%",
-            zIndex: -1,
-            borderRadius: "3px",
-          }}
-        ></motion.div> */}
-        {/* Black background motion div bottom up
-        <motion.div
-          initial={{ height: 0, width: "100%", bottom: 0 }}
-          animate={{
-            height: ["0%", "50%", "50%"], // Extend to 50% height
-            width: ["100%", "100%", "0%"], // Decrease width to 0%
-            transition: {
-              duration: 3.8, delay: 1.4 // Total animation duration
-            },
-          }}
-          style={{
-            background: "black",
-            position: "absolute",
-            zIndex: -1,
-            borderRadius: "3px",
-          }}
-        /> */}
+        
       </div>
     );
   }

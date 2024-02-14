@@ -40,7 +40,7 @@ function About_Me() {
                 borderWidth="1px"
                 p="4"
                 maxWidth="70%"
-                maxHeight={"96%"}
+                maxHeight={"95%"}
                 backgroundColor={"black"}
               >
                 <CardHeader>
@@ -78,7 +78,7 @@ function About_Me() {
         </motion.div>
       </AnimatePresence>
 
-      {/* black background sideways*/}
+      black background sideways
       <motion.div
         initial={{ width: "100%", height: 0, top: 0 }}
         animate={{

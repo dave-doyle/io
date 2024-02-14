@@ -6,7 +6,7 @@ import axios from "axios";
 import RevealText from "./RevealText.js";
 
 function About() {
-  const phrase_1 = ["DAVID DOYLE"];
+  const phrase_1 = ["David Doyle"];
 
   const initialDelay = 30;
   const revealDuration = 100;
