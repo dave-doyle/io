@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "../CellsBackground.css";
 
-import CELLS from "vanta/src/vanta.birds.js";
+import CELLS from "vanta/src/vanta.globe.js";
 
 const CellsBackground = () => {
   const vantaRef = useRef(null);
