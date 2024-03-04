@@ -78,7 +78,6 @@ function About_Me() {
         </motion.div>
       </AnimatePresence>
 
-      black background sideways
       <motion.div
         initial={{ width: "100%", height: 0, top: 0 }}
         animate={{
